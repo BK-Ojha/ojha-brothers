@@ -8,10 +8,9 @@ import About from './components/About'
 import ContactUs from './components/ContactUs'
 import Welcome from './components/Welcome'
 import CarBookingServices from './components/CarBookingServices'
-import TruckLoadingServices from './components/TruckBookingServices'
+import TruckLoadingServices from './components/TruckLoadingServices'
 import NavbarComponents from './components/NavbarComponents'
 import CarData from './components/CarData'
-import TruckData from './components/TruckData'
 import WhatsappChat from './components/WhatsappChat'
 
 function App() {
@@ -34,7 +33,6 @@ function App() {
               element={<CarBookingServices />}
             />
             <Route path="/cardata" element={<CarData />} />
-            <Route path="/truckdata" element={<TruckData />} />
             <Route
               path="/truckloadingservices"
               element={<TruckLoadingServices />}

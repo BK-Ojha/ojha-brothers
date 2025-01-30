@@ -71,7 +71,9 @@ const CarBookingServices = () => {
         marginLeft: '53.1rem',
         marginTop: '13rem',
         borderRadius: '50px 0 50px 0',
+        marginBottom: '2rem',
       },
+      className: 'dheerucar',
     },
     {
       url: '/kuldeep-car.jpg',
@@ -89,6 +91,7 @@ const CarBookingServices = () => {
         marginLeft: '53.1rem',
         marginTop: '13rem',
         borderRadius: '50px 0 50px 0',
+        marginBottom: '2rem',
       },
 
       className: 'blackScorpiomobile',
@@ -104,11 +107,12 @@ const CarBookingServices = () => {
       mileage: '15 km/l',
       performance: '0-100 km/h in 7.5 sec, Top Speed 220 km/h',
       style: {
-        height: '60vh',
+        height: '50vh',
         // borderRadius: '10px',
         marginLeft: '59.1rem',
         marginTop: '13rem',
         borderRadius: '50px 0 50px 0',
+        marginBottom: '2rem',
       },
       className: 'xuvmobile',
     },
@@ -130,6 +134,7 @@ const CarBookingServices = () => {
         marginLeft: '53.1rem',
         marginTop: '13rem',
         borderRadius: '50px 0 50px 0',
+        marginBottom: '2rem',
       },
 
       className: 'xaileshBoleromobile',
@@ -151,6 +156,7 @@ const CarBookingServices = () => {
         marginLeft: '53.1rem',
         marginTop: '13rem',
         borderRadius: '50px 0 50px 0',
+        marginBottom: '2rem',
       },
 
       className: 'mamaBoleromobile',
@@ -172,6 +178,7 @@ const CarBookingServices = () => {
         marginLeft: '53.1rem',
         marginTop: '13rem',
         borderRadius: '50px 0 50px 0',
+        marginBottom: '2rem',
       },
 
       className: 'blackScorpiomobile',
@@ -199,6 +206,17 @@ const CarBookingServices = () => {
       engineDetails: '2.0L Petrol',
       mileage: '15 km/l',
       performance: '0-100 km/h in 7.5 sec, Top Speed 220 km/h',
+      style: {
+        height: '60vh',
+        width: '42%',
+        // borderRadius: '10px',
+        marginLeft: '53.1rem',
+        marginTop: '13rem',
+        borderRadius: '50px 0 50px 0',
+        marginBottom: '2rem',
+      },
+
+      className: 'shivakantScorpiomobile',
     },
     {
       url: '/mausa-car.jpg',
@@ -217,6 +235,7 @@ const CarBookingServices = () => {
         marginLeft: '53.1rem',
         marginTop: '13rem',
         borderRadius: '50px 0 50px 0',
+        marginBottom: '2rem',
       },
 
       className: 'mausaBoleromobile',
@@ -247,6 +266,7 @@ const CarBookingServices = () => {
   const buttonStyle = (isHovered) => ({
     background: isHovered ? '#198754' : 'transparent',
     color: isHovered ? 'white' : 'transparent',
+    textShadow: isHovered ? '0 4px 10px black' : 'none',
     border: 'none',
     padding: '12px ',
     cursor: 'pointer',
@@ -266,22 +286,50 @@ const CarBookingServices = () => {
     <>
       <style>
         {`
+
+
+                  /* Global reset for box-sizing */
+                  *,
+                  *::before,
+                  *::after {
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                  }
+
+                  body,
+                  html {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    overflow-x: hidden; /* Prevent horizontal scrolling */
+                  }
+
                       @media (max-width: 768px) {
-                        .select-container1{
-                          // display:flex;
-                          // justify-content:center;
-                          // align-items:center;
-                          margin-top: 4rem !important
+                      .select-container1 {
+                          margin-top: -6rem !important;
+                      
+                      }
+                        .select-container2{
+                          display:flex !important;
+                          justify-content:center !important;
+                          align-items:center !important;
+                          margin-top: 4rem !important;
                         }
                          .row-image {
-                            display: flex;
-                            flex-direction: column; /* Stack images vertically if needed */
-                            justify-content: center;
-                            align-items: center; /* Center all images horizontally */
+                            display: flex !important;
+                            flex-direction: column !important; /* Stack images vertically if needed */
+                            justify-content: center !important;
+                            align-items: center !important; /* Center all images horizontally */
                           }
                           .row-image img {
+                          
+                            margin-left: 2rem;
                             margin-bottom: 1rem; /* Add spacing between images */
                           }
+                            .buttonRead{
+                              padding-bottom:10rem !important;
+                            }
                       }              
 
               `}
@@ -364,7 +412,7 @@ const CarBookingServices = () => {
                     />
                     <div>
                       <button
-                        className="fw-bold"
+                        className="fw-bold buttonRead"
                         style={buttonStyle(hoveredIndex === index)}
                         onClick={() => handleCarData(image)}
                       >
@@ -377,131 +425,6 @@ const CarBookingServices = () => {
             </Row>
           </div>
         </section>
-
-        {/* Contact Section */}
-        {/* <section
-          className="contact-section py-5 bg-light"
-          style={
-            {
-              // marginTop: '4rem',
-              // fontFamily: "'Pacifico', cursive",
-            }
-          }
-        >
-          <div
-            style={{
-              marginTop: '-1rem',
-              display: 'flex',
-              justifyContent: 'center', // Center horizontally
-              alignItems: 'center', // Center vertically
-              gap: '1rem',
-            }}
-          >
-            <hr
-              style={{
-                width: '5rem',
-                height: '5px',
-                backgroundColor: 'red', // Use backgroundColor instead of color
-                border: 'none',
-              }}
-            />
-            <hr
-              style={{
-                width: '1rem',
-                height: '1rem',
-                backgroundColor: 'red', // Use backgroundColor instead of color
-                border: 'none',
-                transform: 'rotate(135deg)', // Create a diagonal line
-              }}
-            />
-            <hr
-              style={{
-                width: '5rem',
-                height: '5px',
-                backgroundColor: 'red', // Use backgroundColor instead of color
-                border: 'none',
-              }}
-            />
-          </div>
-          <h2
-            className="text-center fw-bold mb-4"
-            data-aos="fade-up"
-            style={{ letterSpacing: '2px', fontFamily: 'normal' }}
-          >
-            CONTACT US
-          </h2>
-          <Container>
-            <Row
-              style={{
-                fontFamily: "'Pacifico', cursive",
-                marginBottom: '2rem',
-                marginTop: '3rem',
-                color: '#333',
-                marginLeft: '2rem',
-              }}
-            >
-              <Col md={6} data-aos="fade-right">
-                <h3
-                  className="fw-bold "
-                  style={{
-                    marginBottom: '1rem',
-                    marginTop: '1rem',
-                    color: 'indigo',
-                  }}
-                >
-                  Get In Touch
-                </h3>
-                <p>
-                  <span className="fw-bold">
-                    <FaMapMarkerAlt /> Address :{' '}
-                  </span>
-                  Mau, Chitrakoot, Uttar Pradesh
-                </p>
-                <p>
-                  {' '}
-                  <span className="fw-bold">
-                    <FaPhoneAlt /> Phone :{' '}
-                  </span>{' '}
-                  +91 9838875119
-                </p>
-                <p>
-                  {' '}
-                  <span className="fw-bold">
-                    <FaEnvelope /> Email :{' '}
-                  </span>{' '}
-                  deepakojha6386@gmail.com
-                </p>
-              </Col>
-              <Col md={6} data-aos="fade-left call-to-action-section">
-                <p
-                  className="fw-bold text-action call-to-action-text"
-                  data-aos="fade-up"
-                  style={{
-                    letterSpacing: '2px',
-                    fontSize: '25px',
-                    color: 'indigo',
-                  }}
-                >
-                  Plan your journey with Ojha Brothers today!
-                </p>
-                <Link to="/contactus">
-                  <Button
-                    className="fw-bold btn btn-outline-danger call-to-action-button"
-                    data-aos="fade-up"
-                    variant="outline-danger"
-                    style={{
-                      width: '14rem',
-                      height: '3rem',
-                      marginTop: '1rem',
-                    }}
-                  >
-                    📞 Call To Action
-                  </Button>
-                </Link>
-              </Col>
-            </Row>
-          </Container>
-        </section> */}
 
         <WhatsappChat />
         <Footer />

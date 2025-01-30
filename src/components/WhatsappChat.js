@@ -58,7 +58,7 @@ const WhatsappChat = () => {
           }
           .chat-box-header h4 {
             margin: 0;
-            font-size: 16px;
+            font-size: 14px;
           }
           .chat-box-header button {
             background: none;
@@ -109,19 +109,28 @@ const WhatsappChat = () => {
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
           alt="WhatsApp"
+          title="WhatsApp Us"
           className="whatsapp-icon"
         />
       </div>
 
       {/* WhatsApp Chat Box */}
       {isChatOpen && (
-        <div className="chat-box">
+        <div
+          className="chat-box mb-3"
+          data-aos="fade-right"
+          data-aos-delay="0"
+          style={{
+            boxShadow:
+              '0 10px 25px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.15)',
+          }}
+        >
           <div className="chat-box-header">
-            <h4>Linhoff - Modular Kitchen</h4>
+            <h4>Ojha Brothers - Hanumat Kripa Roadlines</h4>
             <button onClick={() => setIsChatOpen(false)}>&times;</button>
           </div>
           <div className="chat-box-body">
-            <p>Any questions related to Modular Kitchen or Interior Design?</p>
+            <p>Any questions related to Car booking Or Truck Loading?</p>
           </div>
           <div className="chat-box-footer">
             <a

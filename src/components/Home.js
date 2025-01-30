@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import CountUp from 'react-countup'
@@ -68,15 +68,33 @@ const Home = () => {
       alt: 'Urgent Booking Service',
       description:
         'Need an urgent booking? Count on us for prompt and reliable services, tailored to your needs!',
-      link: '/carbookingservices',
     },
     {
-      src: '/wedding.jpg',
+      src: '/events_img.jpg',
+      alt: 'Special Events Booking',
+      description:
+        'Hosting a special event? Let us take care of your transportation needs with our reliable and convenient booking services.',
+    },
+    {
+      src: '/celebrations_img.jpg',
+      alt: 'Celebration Rides',
+      description:
+        'Make your celebrations extra special with our comfortable and timely transport options, tailored for your joyous occasions!',
+    },
+
+    {
+      src: '/wedding_img.jpg',
       alt: 'Celebrate Love with Our Reliable Wedding Travel Services',
       description:
         'Make every celebration unforgettable—travel comfortably with our dependable services designed for your special occasions!',
-      link: '/truckloadingservices',
     },
+    {
+      src: '/meeting_img.jpg',
+      alt: 'Business Meetings',
+      description:
+        'Ensure you arrive on time and in style for your important meetings with our professional car booking services.',
+    },
+
     {
       src: '/maihar.jpg',
       alt: 'Visit Maihar',
@@ -142,10 +160,30 @@ const Home = () => {
       description: 'Step into history with the stunning Hawa Mahal in Jaipur.',
     },
   ]
+  const [isHovered, setIsHovered] = useState()
   return (
     <>
       <style>
         {`
+
+
+              /* Global reset for box-sizing */
+                *,
+                *::before,
+                *::after {
+                  box-sizing: border-box;
+                  margin: 0;
+                  padding: 0;
+                }
+
+                body,
+                html {
+                  margin: 0;
+                  padding: 0;
+                  width: 100%;
+                  overflow-x: hidden; /* Prevent horizontal scrolling */
+                }
+
                 .slider-container {
                 overflow: hidden;
                 white-space: nowrap;
@@ -184,6 +222,7 @@ const Home = () => {
                 transform: scale(1.02);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
               }
+
               .card-hover-effect:hover .caption {
                 color: #000; /* Darker text on hover */
                 transform: translateY(-5px); /* Slight lift on hover */
@@ -195,10 +234,12 @@ const Home = () => {
                 transform: translateY(20px);
                 transition: opacity 0.5s ease, transform 0.5s ease;
               }
+                
               .card-hover-effect:hover .card-content {
               opacity: 1;
               transform: translateY(0);
               }
+
             .carousel-image {
               height: 200px;
               width: auto;
@@ -245,7 +286,7 @@ const Home = () => {
             }
            .image-track {
                 display: flex;
-                animation: slide 90s linear infinite;
+                animation: slide 150s linear infinite;
                 // display: flex;
                 width: max-content;
                 gap:4rem;
@@ -325,15 +366,7 @@ const Home = () => {
                     .hero-style{
                         margin-top: 3rem !important;
                     }
-                         .hero-text{
-                    // align-items:center !important;
-                    // justify-content:center !important;
-                    // display:flex !important;
-                    // margin-top:2rem !important;
-                    // margin-left: 2rem !important;
-                    // font-size: 20px !important;
-                    }
-                      
+                  
                     .ojha-text{
                     align-items:left !important;
                     justify-content:left !important;
@@ -351,11 +384,8 @@ const Home = () => {
                     font-size: 20px !important;
                     letter-spacing:3px !important;
                     }
-                  //   .button{ 
-                  //   display:flex !important;
-                  //  align-items:center !important;
-                  //   justify-content:center !important;
-                  //   }
+
+
                     .car-button{
                       font-size:12px !important;
                     }
@@ -395,9 +425,11 @@ const Home = () => {
                         width: 100%; /* Full width for smaller screens */
                         height: auto; /* Auto adjust button height */
                         padding: 10px 0;
+                        
                     }
    
                     .card {
+                    
                           border-radius: 10px;
                           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                           transition: transform 0.2s ease-in-out;
@@ -427,7 +459,11 @@ const Home = () => {
           <div className="hero-text">
             <p
               className="display-4 fw-bold text-start ojha-text"
-              style={{ color: 'red', letterSpacing: '3px' }}
+              style={{
+                color: 'red',
+                letterSpacing: '3px',
+                textShadow: '0 4px 10px black',
+              }}
               data-aos="fade-left"
               data-aos-delay="100"
               // className="ojha-text"
@@ -441,6 +477,7 @@ const Home = () => {
                 fontSize: '50px',
                 marginLeft: '10rem',
                 letterSpacing: '10px',
+                textShadow: '0 4px 10px indigo',
               }}
               data-aos="fade-right"
               data-aos-delay="100"
@@ -452,7 +489,11 @@ const Home = () => {
             className="lead"
             data-aos="fade-down"
             data-aos-delay="0"
-            style={{ fontFamily: "'Pacifico', cursive", color: 'yellow' }}
+            style={{
+              fontFamily: "'Pacifico', cursive",
+              color: 'yellow',
+              textShadow: '0 4px 10px green',
+            }}
           >
             Your Trusted Partner for Hassle-Free Car Journeys and Reliable Truck
             Loading Services!
@@ -467,11 +508,11 @@ const Home = () => {
             <Link to="/carbookingservices">
               <button
                 className="btn btn-success btn-lg car-button"
-                style={{ gap: '4rem' }}
+                style={{ gap: '4rem', textShadow: '0 4px 10px black' }}
                 data-aos="fade-up"
                 data-aos-delay="0"
               >
-                Book your Car Now!
+                Book your Car Now !
               </button>
             </Link>
             <Link to="/truckloadingservices">
@@ -479,8 +520,11 @@ const Home = () => {
                 className="btn btn-danger btn-lg truck-button"
                 data-aos="fade-up"
                 data-aos-delay="0"
+                style={{
+                  textShadow: '0 4px 10px black',
+                }}
               >
-                Get your Truck for Loading!
+                Get your Truck for Loading !
               </button>
             </Link>
           </div>
@@ -507,6 +551,7 @@ const Home = () => {
               letterSpacing: '2px',
               color: 'indigo',
               fontFamily: 'normal',
+              // fontFamily: 'Comic Sans MS, Comic Sans, cursive',
               // fontFamily: "'Pacifico', cursive",
             }}
           >
@@ -714,7 +759,10 @@ const Home = () => {
                         <button
                           className="btn btn-success"
                           data-aos="fade-right"
-                          style={{ letterSpacing: '1px' }}
+                          style={{
+                            letterSpacing: '1px',
+                            textShadow: '0 4px 10px black',
+                          }}
                         >
                           Explore Car Booking
                         </button>
@@ -780,7 +828,10 @@ const Home = () => {
                         <button
                           className="btn btn-danger"
                           data-aos="fade-right"
-                          style={{ letterSpacing: '1px' }}
+                          style={{
+                            letterSpacing: '1px',
+                            textShadow: '0 4px 10px black',
+                          }}
                         >
                           Check Truck Services
                         </button>
@@ -906,152 +957,115 @@ const Home = () => {
             </section>
           </div>
         </section>
-        {/* Achievements Section */}
-        <div>
-          <section
-            className="services-section py-5 bg-light "
-            style={sectionStyle}
-          >
-            <div
-              style={{
-                marginTop: '-1rem',
-                display: 'flex',
-                justifyContent: 'center', // Center horizontally
-                alignItems: 'center', // Center vertically
-                gap: '1rem',
-              }}
-            >
-              <hr
-                style={{
-                  width: '5rem',
-                  height: '5px',
-                  backgroundColor: 'red', // Use backgroundColor instead of color
-                  border: 'none',
-                }}
-              />
-              <hr
-                style={{
-                  width: '1rem',
-                  height: '1rem',
-                  backgroundColor: 'red', // Use backgroundColor instead of color
-                  border: 'none',
-                  transform: 'rotate(135deg)', // Create a diagonal line
-                }}
-              />
-              <hr
-                style={{
-                  width: '5rem',
-                  height: '5px',
-                  backgroundColor: 'red', // Use backgroundColor instead of color
-                  border: 'none',
-                }}
-              />
-            </div>
-            <h2
-              className="text-center mb-4"
-              data-aos="fade-up"
-              style={{
-                fontWeight: 'bold',
-                letterSpacing: '2px',
-                fontFamily: 'normal',
-                // textShadow: '2px 2px 6px rgba(0,0,0,0.3)',
-              }}
-            >
-              <span className="text-danger">OUR</span>
-              <span className="text-success"> ACHIEVEMENTS</span>
-            </h2>
-            <div className="row text-center mt-5">
-              <div
-                className="col-md-3"
-                style={statsCardStyle}
-                data-aos="fade-up"
-                data-aos-delay="0"
-              >
-                <h1>
-                  <CountUp
-                    start={0}
-                    end={1000}
-                    duration={3}
-                    useEasing={true}
-                    suffix="+"
-                  />
-                </h1>
-                <p
-                  className="text-muted"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
-                >
-                  Happy Customers
-                </p>
-              </div>
-              <div
-                className="col-md-3"
-                style={statsCardStyle}
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <h1>
-                  <CountUp
-                    start={0}
-                    end={500}
-                    duration={3}
-                    useEasing={true}
-                    suffix="+"
-                  />
-                </h1>
-                <p
-                  className="text-muted"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
-                >
-                  Car Bookings
-                </p>
-              </div>
-              <div
-                className="col-md-3"
-                style={statsCardStyle}
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <h1>
-                  <CountUp
-                    start={0}
-                    end={200}
-                    duration={3}
-                    useEasing={true}
-                    suffix="+"
-                  />
-                </h1>
-                <p
-                  className="text-muted"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
-                >
-                  Trucks Loaded
-                </p>
-              </div>
-              <div
-                className="col-md-3"
-                style={statsCardStyle}
-                data-aos="fade-up"
-                data-aos-delay="600"
-              >
-                <h1>
-                  <CountUp
-                    start={0}
-                    end={5}
-                    duration={4}
-                    useEasing={true}
-                    suffix="+"
-                  />
-                </h1>
-                <p
-                  className="text-muted"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
-                >
-                  Years of Service
-                </p>
-              </div>
-            </div>
-          </section>
+
+        {/* Testimonials Section */}
+        <div
+          style={{
+            marginTop: '-1rem',
+            display: 'flex',
+            justifyContent: 'center', // Center horizontally
+            alignItems: 'center', // Center vertically
+            gap: '1rem',
+          }}
+        >
+          <hr
+            style={{
+              width: '5rem',
+              height: '5px',
+              backgroundColor: 'red', // Use backgroundColor instead of color
+              border: 'none',
+            }}
+          />
+          <hr
+            style={{
+              width: '1rem',
+              height: '1rem',
+              backgroundColor: 'red', // Use backgroundColor instead of color
+              border: 'none',
+              transform: 'rotate(135deg)', // Create a diagonal line
+            }}
+          />
+          <hr
+            style={{
+              width: '5rem',
+              height: '5px',
+              backgroundColor: 'red', // Use backgroundColor instead of color
+              border: 'none',
+            }}
+          />
         </div>
+        <h2
+          className="text-center mb-4"
+          data-aos="fade-up"
+          style={{
+            fontWeight: 'bold',
+            letterSpacing: '2px',
+            fontFamily: 'normal',
+            // textShadow: '2px 2px 6px rgba(0,0,0,0.3)',
+          }}
+        >
+          <span className="text-danger">WHAT OUR</span>
+          <span className="text-success"> CLIENTS SAY</span>
+        </h2>
+        <section
+          className="testimonials-section py-5 bg-light"
+          data-aos="fade-up"
+          style={{
+            backgroundImage: "url('/forest.jpg')", // Set the background image
+            backgroundSize: 'cover', // Ensure the image covers the entire section
+            backgroundPosition: 'center', // Center the image
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          <Row
+            style={{
+              margin: '2rem',
+            }}
+          >
+            {[
+              {
+                text: 'Excellent service! Always on time and reliable.',
+                name: 'Ramesh Kumar',
+              },
+              {
+                text:
+                  'Affordable and professional. Highly recommend their services.',
+                name: 'Priya Sharma',
+              },
+              {
+                text: 'They made my logistics easier than ever! Great team.',
+                name: 'Ajay Gupta',
+              },
+            ].map((testimonial, index) => (
+              <Col
+                md={4}
+                data-aos="flip-left"
+                key={index}
+                className="testimonial-box"
+              >
+                <blockquote className="p-4 shadow rounded ">
+                  <div className="stars text-end">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} color="#ffc107" />
+                    ))}
+                  </div>
+                  <p
+                    className="testimonial-text"
+                    style={{ fontFamily: "'Pacifico', cursive" }}
+                  >
+                    {testimonial.text}
+                  </p>
+                  <footer
+                    className="testimonial-author"
+                    style={{ letterSpacing: '2px' }}
+                  >
+                    - {testimonial.name}
+                  </footer>
+                </blockquote>
+              </Col>
+            ))}
+          </Row>
+        </section>
 
         {/* About Section */}
         <section
@@ -1203,12 +1217,156 @@ const Home = () => {
           </Row>
         </section>
 
-        {/* Testimonials Section */}
-        <section
-          className="testimonials-section py-5 bg-light"
-          data-aos="fade-up"
-        >
+        {/* Achievements Section */}
+        <div>
+          <section
+            className="services-section py-5 bg-light "
+            style={sectionStyle}
+          >
+            <div
+              style={{
+                marginTop: '-1rem',
+                display: 'flex',
+                justifyContent: 'center', // Center horizontally
+                alignItems: 'center', // Center vertically
+                gap: '1rem',
+              }}
+            >
+              <hr
+                style={{
+                  width: '5rem',
+                  height: '5px',
+                  backgroundColor: 'red', // Use backgroundColor instead of color
+                  border: 'none',
+                }}
+              />
+              <hr
+                style={{
+                  width: '1rem',
+                  height: '1rem',
+                  backgroundColor: 'red', // Use backgroundColor instead of color
+                  border: 'none',
+                  transform: 'rotate(135deg)', // Create a diagonal line
+                }}
+              />
+              <hr
+                style={{
+                  width: '5rem',
+                  height: '5px',
+                  backgroundColor: 'red', // Use backgroundColor instead of color
+                  border: 'none',
+                }}
+              />
+            </div>
+            <h2
+              className="text-center mb-4"
+              data-aos="fade-up"
+              style={{
+                fontWeight: 'bold',
+                letterSpacing: '2px',
+                fontFamily: 'normal',
+                // textShadow: '2px 2px 6px rgba(0,0,0,0.3)',
+              }}
+            >
+              <span className="text-danger">OUR</span>
+              <span className="text-success"> ACHIEVEMENTS</span>
+            </h2>
+            <div className="row text-center mt-5">
+              <div
+                className="col-md-3"
+                style={statsCardStyle}
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
+                <h1>
+                  <CountUp
+                    start={0}
+                    end={1000}
+                    duration={3}
+                    useEasing={true}
+                    suffix="+"
+                  />
+                </h1>
+                <p
+                  className="text-muted"
+                  style={{ fontFamily: "'Pacifico', cursive" }}
+                >
+                  Happy Customers
+                </p>
+              </div>
+              <div
+                className="col-md-3"
+                style={statsCardStyle}
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h1>
+                  <CountUp
+                    start={0}
+                    end={500}
+                    duration={3}
+                    useEasing={true}
+                    suffix="+"
+                  />
+                </h1>
+                <p
+                  className="text-muted"
+                  style={{ fontFamily: "'Pacifico', cursive" }}
+                >
+                  Car Bookings
+                </p>
+              </div>
+              <div
+                className="col-md-3"
+                style={statsCardStyle}
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <h1>
+                  <CountUp
+                    start={0}
+                    end={200}
+                    duration={3}
+                    useEasing={true}
+                    suffix="+"
+                  />
+                </h1>
+                <p
+                  className="text-muted"
+                  style={{ fontFamily: "'Pacifico', cursive" }}
+                >
+                  Trucks Loaded
+                </p>
+              </div>
+              <div
+                className="col-md-3"
+                style={statsCardStyle}
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <h1>
+                  <CountUp
+                    start={0}
+                    end={5}
+                    duration={4}
+                    useEasing={true}
+                    suffix="+"
+                  />
+                </h1>
+                <p
+                  className="text-muted"
+                  style={{ fontFamily: "'Pacifico', cursive" }}
+                >
+                  Years of Service
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        {/* Join as partner Section */}
+        <section className="our-vission py-5 " style={{ marginTop: '0rem' }}>
           <div
+            className="vission-hr"
             style={{
               marginTop: '-1rem',
               display: 'flex',
@@ -1244,7 +1402,7 @@ const Home = () => {
             />
           </div>
           <h2
-            className="text-center mb-4"
+            className="text-center mb-4 text-black fw-bold"
             data-aos="fade-up"
             style={{
               fontWeight: 'bold',
@@ -1253,64 +1411,114 @@ const Home = () => {
               // textShadow: '2px 2px 6px rgba(0,0,0,0.3)',
             }}
           >
-            <span className="text-danger">WHAT OUR</span>
-            <span className="text-success"> CLIENTS SAY</span>
+            <span className="text-danger">JOIN US AS </span>
+            <span className="text-success"> A PARTNER</span>
           </h2>
-          <Row style={{ margin: '2rem' }}>
-            {[
-              {
-                text: 'Excellent service! Always on time and reliable.',
-                name: 'Ramesh Kumar',
-              },
-              {
-                text:
-                  'Affordable and professional. Highly recommend their services.',
-                name: 'Priya Sharma',
-              },
-              {
-                text: 'They made my logistics easier than ever! Great team.',
-                name: 'Ajay Gupta',
-              },
-            ].map((testimonial, index) => (
-              <Col
-                md={4}
-                data-aos="flip-left"
-                key={index}
-                className="testimonial-box"
+
+          <div
+            className="container d-flex flex-column flex-lg-row align-items-center justify-content-between text-justify"
+            style={{
+              gap: '1rem',
+              padding: '1rem',
+              // marginTop: '1.5rem',
+              marginBottom: '1.5rem',
+              // paddingTop: '1.5rem',
+              paddingBottom: '2.5rem',
+            }}
+          >
+            <div
+              className="d-flex flex-wrap justify-content-start justify-content-lg-end text-justify"
+              style={{ gap: '1rem' }}
+            ></div>
+
+            <div>
+              {' '}
+              <h5
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                className="text-justify"
+                style={{
+                  fontSize: '1.2rem',
+                  lineHeight: '1.8',
+                  color: '#555',
+                  marginTop: '1rem',
+                  flex: '1',
+                  textAlign: 'justify',
+                  fontFamily: "'Pacifico', cursive",
+                }}
               >
-                <blockquote className="p-4 shadow rounded ">
-                  <div className="stars text-end">
-                    {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} color="#ffc107" />
-                    ))}
-                  </div>
-                  <p
-                    className="testimonial-text"
-                    style={{ fontFamily: "'Pacifico', cursive" }}
+                {' '}
+                <strong style={{ fontSize: '24px', color: 'indigo' }}>
+                  Grow Your Business with Ojha Brothers - Hanumat Kripa
+                  Roadlines
+                </strong>
+                <br />
+                <strong>Are you a car rental provider or a truck owner?</strong>
+                <br />
+                <strong>
+                  {' '}
+                  Do you want to maximize your bookings and reach more
+                  customers?
+                </strong>
+                <br />
+                Join Ojha Brothers - Hanumat Kripa Roadlines today and become a
+                part of our growing network of trusted service providers.
+              </h5>
+              <div
+                className="text-center align-items-start d-flex"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <Link to="/contactus">
+                  <Button
+                    className="fw-bold btn btn-warning call-to-action-button"
+                    variant="warning"
+                    style={{
+                      letterSpacing: '2px',
+                      width: '14rem',
+                      height: '3rem',
+                      fontSize: '20px',
+                      textShadow: isHovered ? '0 4px 10px black' : 'none',
+                      color: isHovered ? 'white' : 'black',
+                      transition: 'text-shadow 0.3s ease',
+                    }}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                   >
-                    {testimonial.text}
-                  </p>
-                  <footer
-                    className="testimonial-author"
-                    style={{ letterSpacing: '2px' }}
-                  >
-                    - {testimonial.name}
-                  </footer>
-                </blockquote>
-              </Col>
-            ))}
-          </Row>
+                    <i
+                      className="bi bi-telephone-fill"
+                      style={{ color: 'inherit' }}
+                    ></i>{' '}
+                    JOIN US
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <img
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              src="/partners.jpg"
+              alt="Our Vision"
+              className="img-fluid"
+              style={{
+                width: '100%',
+                maxWidth: '450px',
+                height: 'auto',
+                // borderRadius: '8px',
+                // boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              }}
+            />
+          </div>
         </section>
 
         {/* Contact Section */}
         <section
-          className="contact-section py-5"
-          style={
-            {
-              // marginTop: '4rem',
-              // fontFamily: "'Pacifico', cursive",
-            }
-          }
+          className="contact-section py-5 bg-light"
+          style={{
+            marginTop: '-2rem',
+            fontFamily: "'Pacifico', cursive",
+          }}
         >
           <div
             style={{
@@ -1409,20 +1617,7 @@ const Home = () => {
                 >
                   Plan your journey with Ojha Brothers today!
                 </p>
-                {/* <Link to="/contactus">
-                  <Button
-                    className="fw-bold btn btn-outline-danger call-to-action-button"
-                    data-aos="fade-up"
-                    variant="outline-danger"
-                    style={{
-                      width: '14rem',
-                      height: '3rem',
-                      marginTop: '1rem',
-                    }}
-                  >
-                    📞 Call To Action
-                  </Button>
-                </Link> */}
+
                 <Link to="/contactus">
                   <Button
                     className="fw-bold btn btn-outline-danger call-to-action-button"
@@ -1433,9 +1628,18 @@ const Home = () => {
                       width: '14rem',
                       height: '3rem',
                       marginTop: '1rem',
+                      fontSize: '20px',
+                      textShadow: isHovered ? '0 4px 10px black' : 'none',
+                      transition: 'text-shadow 0.3s ease', // Smooth transition
                     }}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                   >
-                    📞 Let's Talk!
+                    <i
+                      class="bi bi-telephone-fill"
+                      style={{ color: 'inherit' }}
+                    ></i>{' '}
+                    Let's Talk!
                   </Button>
                 </Link>
               </Col>

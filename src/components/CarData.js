@@ -1,91 +1,54 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import { Button } from 'react-bootstrap'
 import { Link, useLocation } from 'react-router-dom'
-import styled, { keyframes } from 'styled-components'
 import WhatsappChat from './WhatsappChat'
-
-// Sliding contents from right to left
-const fadeSlideRight = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(25rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`
-
-const AnimatedHeading2 = styled.h1`
-  animation: ${({ inTextView }) => (inTextView ? fadeSlideRight : 'none')} 0.6s
-    ease-in-out;
-  font-family: cursive;
-  color: #333;
-  letter-spacing: 5px;
-  line-height: 0.3;
-  text-shadow: 0 4px 5px gray;
-  text-align: center;
-  margin-top: 11rem;
-  margin-bottom: -9rem;
-  transition: filter 0.3s ease;
-  textalign: 'center';
-`
 
 const CarData = () => {
   const location = useLocation()
   const carData = location.state
-  const [inTextView, setInTextView] = useState(false)
-  const headingRef = useRef(null)
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInTextView(true)
-        }
-      },
-      { threshold: 0.5 },
-    )
-    if (headingRef.current) {
-      observer.observe(headingRef.current)
-    }
-
-    return () => {
-      if (headingRef.current) {
-        observer.unobserve(headingRef.current)
-      }
-    }
-  }, [])
-  const colors = ['black', 'red']
-  const text1 = 'CAR SHOWCASE'
 
   return (
     <>
       <style>
         {`
-      /* General styling for the car data container */
-            .car-data-container {
-              padding: 20px;
-            }
-            
-          .car-info {
-            font-family: cursive;
-            max-width: 600px;
-            margin-top: -33rem;
-            margin-left: 100px;
-            width: 100%;
-            // background-color: aqua;
-            padding: 20px;
-              border-radius:50px 0 50px 0;
-            box-shadow: 0 4px 10px black;
+
+          /* Global reset for box-sizing */
+          *,
+          *::before,
+          *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
           }
 
-          .car-info h2 {
-            text-align: center;
-            margin-bottom: 20px;
+          body,
+          html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
           }
+
+             .xuvmobile{
+            margin-top: 2rem !important;
+            height: 53vh !important;    
+            width:82vh !important;
+            }
+              .dheerucar, .blackScorpiomobile,
+              .xaileshBoleromobile, .mamaBoleromobile{
+            margin-top: 1rem !important;
+            height: 53vh !important;  
+            width:82vh !important;
+            }
+                    .shivakantScorpiomobile, .mausaBoleromobile{
+            margin-top: 1rem !important;
+            height: 55vh !important;  
+            width:82vh !important;
+            }
 
           .specifications, .performance {
             margin-bottom: 20px;
+             margin-top: 30px;
           }
 
           .specifications h3, .performance h3 {
@@ -105,191 +68,184 @@ const CarData = () => {
             padding: 5px 0;
             font-size: 1.1em;
             line-height: 1.6;
-          }
+          }  
+             @media (max-width: 768px) {
+      .mobile-left-align {
+        text-align: left !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-          ul li strong {
-            font-weight: bold;
-          }
+      .mobile-left-align h3, 
+      .mobile-left-align ul {
+        text-align: left !important;
+      }
 
-          /* Responsive Design */
-          @media (max-width: 768px) {
-
-          .hrLine{
-          display:none;
-          }
-          
-          .filterColor{
-                margin-top:9rem !important;
-          }
-          .car-image {
-            margin-left: 0 !important;
-            margin-top: 10rem !important;
-            width: 100% !important;
-            height: 50% !important;          
-          }
-          .car-info {
-            margin-left: 2.7rem !important;
-            margin-top: 1rem !important;
-            height: 30vh !important; 
-            font-size:14px !important;
-            overflow-y: scroll !important;
-              margin-bottom:1rem !important;
-          }
-          .toHide{   
-              overflow-y: scroll !important; /* Enable vertical scrolling */
-              height: auto !important; 
-              margin-top: -2rem !important;
-            }
-      
-            .xuvmobile{
-           margin-left: 6rem !important;
-            margin-top: 10rem !important;
-            width: 70% !important;
-            height: 47vh !important;  
-            }
-
-            .blackScorpiomobile{
-           margin-left: 2rem !important;
-            margin-top: 11rem !important;
-            width: 90% !important;
-            height: 45vh !important;  
-            }
-            .xaileshBoleromobile{
-           margin-left: 0rem !important;
-            margin-top: 11rem !important;
-            width: 87% !important;
-            height: 45vh !important; 
-            }
-            .mamaBoleromobile{
-           margin-left: 7rem !important;
-            margin-top: 11rem !important;
-            width: 70% !important;
-            height: 45vh !important;
-            }
-          .mausaBoleromobile{
-           margin-left: 0rem !important;
-            margin-top: 11rem !important;
-            width: 87% !important;
-            height: 45vh !important; 
-          }
-}
+      .mobile-image {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 400px !important;
+      }
+    }
 `}
       </style>
-      <div>
-        <span>
-          <AnimatedHeading2
-            ref={headingRef}
-            inTextView={inTextView}
-            className="fw-bold filterColor"
-          >
-            {text1.split('').map((char, index) => (
-              <span
-                key={index}
-                style={{
-                  color: colors[index % colors.length], // Cycle through colors
-                }}
-              >
-                {char}
-              </span>
-            ))}
-          </AnimatedHeading2>
-        </span>
-        <hr
-          className="hrLine"
-          style={{
-            backgroundColor: 'white',
-            opacity: '1',
-            // color: 'gray', // Ensures the HR has a visible color
-            height: '8px', // Adjust for desired thickness
-            transform: 'rotate(90deg)', // Rotates the HR
-            width: '450px', // Adjust length
-            // margin: '0', // Removes default margins
-            position: 'fixed', // Allows precise positioning
-            top: '59%', // Adjust top position
-            left: '33%', // Adjust left position
-            // transform: 'translate(-50%, -50%) rotate(90deg)',
-            border: 'none',
-            boxShadow: '0 4px 10px black',
-          }}
-        />
-        {/* <h1>{carData.alt} </h1> */}
-        <div className="">
-          <div className="">
-            <img
-              className={`car-image ${carData.className}`}
-              src={carData.url}
-              alt={carData.alt}
-              style={carData.style}
-            />
-          </div>
-          ,
-          <div className="toHide">
-            <div className="car-info ">
+      <section className="our-vission py-5" style={{ marginTop: '7rem' }}>
+        {/* Header Design */}
+        <div
+          className="vission-hr d-flex justify-content-center align-items-center gap-3"
+          style={{ marginTop: '-2rem' }}
+        >
+          <hr
+            style={{
+              width: '5rem',
+              height: '5px',
+              backgroundColor: 'red',
+              border: 'none',
+            }}
+          />
+          <hr
+            style={{
+              width: '1rem',
+              height: '1rem',
+              backgroundColor: 'red',
+              border: 'none',
+              transform: 'rotate(135deg)',
+            }}
+          />
+          <hr
+            style={{
+              width: '5rem',
+              height: '5px',
+              backgroundColor: 'red',
+              border: 'none',
+            }}
+          />
+        </div>
+
+        {/* Title */}
+        <h2
+          className="text-center mb-4 fw-bold mb-4"
+          data-aos="fade-up"
+          style={{ letterSpacing: '2px', fontFamily: 'normal' }}
+        >
+          <span className="text-danger">CAR</span>{' '}
+          <span className="text-success">SHOWCASE</span>
+        </h2>
+
+        {/* Car Details & Image */}
+        <div
+          className="container text-start d-flex flex-column flex-lg-row align-items-start justify-content-start gap-4"
+          style={{ marginTop: '2rem' }}
+        >
+          <div>
+            <div
+              className="d-flex align-items-center justify-content-center bg-success"
+              style={{
+                height: '3rem',
+                width: '100%',
+              }}
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
               <h2
-                className="fw-bold"
+                data-aos="fade-up"
+                data-aos-duration="1500"
+                className="fw-bold text-center"
                 style={{
+                  letterSpacing: '2px',
+                  fontSize: '24px',
                   color: 'white',
-                  letterSpacing: '5px',
+                  fontFamily: 'cursive',
                   textShadow: '0 4px 10px black',
-                  transition: 'filter 0.3s ease',
-                  animation: 'fadeSlideRight 1s ease-in-out',
                 }}
               >
                 {carData.alt}
               </h2>
+            </div>
 
-              {/* Basic Specifications Section */}
-              <div className="specifications">
-                <h3 style={{ letterSpacing: '1px' }}>Basic Specifications</h3>
-                <ul>
-                  {' '}
-                  <li>
-                    <strong>Color :</strong> {carData.color}
-                  </li>
-                  <li>
-                    <strong>Seating Capacity :</strong>{' '}
-                    {carData.seatingCapacity}
-                  </li>
-                  <li>
-                    <strong>Air Conditioning :</strong> {carData.acType}
-                  </li>
-                  <li>
-                    <strong>Transmission :</strong> {carData.transmission}
-                  </li>
-                </ul>
-              </div>
+            {/* Basic Specifications */}
+            <div
+              className="specifications "
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <h3 className="text-black" style={{ letterSpacing: '1px' }}>
+                Basic Specifications
+              </h3>
+              <ul>
+                <li>
+                  <strong>Color:</strong> {carData.color}
+                </li>
+                <li>
+                  <strong>Seating Capacity:</strong> {carData.seatingCapacity}
+                </li>
+                <li>
+                  <strong>Air Conditioning:</strong> {carData.acType}
+                </li>
+                <li>
+                  <strong>Transmission:</strong> {carData.transmission}
+                </li>
+              </ul>
+            </div>
 
-              {/* Engine and Performance Section */}
-              <div className="performance">
-                <h3 style={{ letterSpacing: '1px' }}>Engine and Performance</h3>
-                <ul>
-                  <li>
-                    <strong>Engine Details :</strong> {carData.engineDetails}
-                  </li>
-                  <li>
-                    <strong>Mileage :</strong> {carData.mileage}
-                  </li>
-                  <li>
-                    <strong>Top Speed and Acceleration :</strong>{' '}
-                    {carData.performance}
-                  </li>
-                </ul>
-              </div>
+            {/* Engine and Performance */}
+            <div
+              className="performance"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <h3 className="text-black" style={{ letterSpacing: '1px' }}>
+                Engine and Performance
+              </h3>
+              <ul>
+                <li>
+                  <strong>Engine Details:</strong> {carData.engineDetails}
+                </li>
+                <li>
+                  <strong>Mileage:</strong> {carData.mileage}
+                </li>
+                <li>
+                  <strong>Top Speed and Acceleration:</strong>{' '}
+                  {carData.performance}
+                </li>
+              </ul>
               <Link to="/contactus">
                 <Button
-                  variant="outline-danger"
-                  className="fw-bold"
+                  variant="danger"
+                  className="fw-bold mt-3"
                   style={{
                     letterSpacing: '2px',
+                    textShadow: '0 4px 10px black',
+                    fontSize: '20px',
+                    width: '100%',
                   }}
                 >
-                  Book now!
+                  Book Now!
                 </Button>
               </Link>
             </div>
+
+            {/* Booking Button */}
+            <div></div>
           </div>
+
+          {/* Car Image */}
+          <img
+            className={`car-image img-fluid ${carData.className}`}
+            src={carData.url}
+            alt={carData.alt}
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            style={{
+              width: '100%',
+              maxWidth: '700px',
+              borderRadius: '8px',
+              // boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+            }}
+          />
         </div>
-      </div>
+      </section>
       <WhatsappChat />
     </>
   )
