@@ -271,6 +271,7 @@ const CarData = () => {
                     letterSpacing: '2px',
                     textShadow: '0 4px 10px black',
                     fontSize: '20px',
+                    borderRadius: '0 50px 0 50px',
                   }}
                 >
                   Book Now!

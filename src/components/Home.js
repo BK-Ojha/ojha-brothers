@@ -460,9 +460,10 @@ const Home = () => {
             <p
               className="display-4 fw-bold text-start ojha-text"
               style={{
-                color: 'red',
+                color: 'indigo',
                 letterSpacing: '3px',
-                textShadow: '0 4px 10px black',
+                textShadow: '1px 0px 6px gray',
+                fontFamily: "'Poppins', 'Roboto', 'Arial', sans-serif",
               }}
               data-aos="fade-left"
               data-aos-delay="100"
@@ -478,6 +479,7 @@ const Home = () => {
                 marginLeft: '10rem',
                 letterSpacing: '10px',
                 textShadow: '0 4px 10px indigo',
+                fontFamily: "'Poppins', 'Roboto', 'Arial', sans-serif",
               }}
               data-aos="fade-right"
               data-aos-delay="100"
@@ -490,7 +492,8 @@ const Home = () => {
             data-aos="fade-down"
             data-aos-delay="0"
             style={{
-              fontFamily: "'Pacifico', cursive",
+              // fontFamily: "'Pacifico', cursive",
+              fontFamily: "'Poppins', 'Roboto', 'Arial', sans-serif",
               color: 'yellow',
               textShadow: '0 4px 10px green',
             }}
@@ -1011,7 +1014,7 @@ const Home = () => {
           className="testimonials-section py-5 bg-light"
           data-aos="fade-up"
           style={{
-            backgroundImage: "url('/forest.jpg')", // Set the background image
+            backgroundImage: "url('/water-fall.jpeg')", // Set the background image
             backgroundSize: 'cover', // Ensure the image covers the entire section
             backgroundPosition: 'center', // Center the image
             backgroundRepeat: 'no-repeat',

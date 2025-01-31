@@ -144,6 +144,7 @@ const CarData = () => {
               style={{
                 height: '3rem',
                 width: '100%',
+                borderRadius: '0 50px 0 50px',
               }}
               data-aos="fade-right"
               data-aos-duration="1500"
@@ -219,6 +220,7 @@ const CarData = () => {
                     textShadow: '0 4px 10px black',
                     fontSize: '20px',
                     width: '100%',
+                    borderRadius: '0 50px 0 50px ',
                   }}
                 >
                   Book Now!

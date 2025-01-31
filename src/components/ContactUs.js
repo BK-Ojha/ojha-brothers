@@ -40,10 +40,7 @@ const ContactUs = () => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Form Submitted', formData)
-    // Add further logic to handle form submission (e.g., API call)
-    alert('Form Submitted Successfully!')
+    setFormData({ ...formData, [e.target.name]: e.target.value })
   }
   return (
     <>
@@ -659,6 +656,8 @@ const ContactUs = () => {
                     We Love to Hear from You !
                   </h3>
                   <form
+                    action="https://formsubmit.co/bkojha8169@gmail.com"
+                    method="POST"
                     onSubmit={handleSubmit}
                     style={{
                       backgroundColor: '#fff',
@@ -669,6 +668,8 @@ const ContactUs = () => {
                     }}
                     className="mt-3 p-3 fw-bold"
                   >
+                    {/* Hidden Input to Prevent Spam */}
+                    <input type="hidden" name="_captcha" value="false" />
                     <div className="mb-3">
                       <label
                         data-aos="fade-right"
