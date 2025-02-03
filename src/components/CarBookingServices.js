@@ -63,7 +63,7 @@ const CarBookingServices = () => {
       acType: 'Manual climate control',
       transmission: 'Manual',
       mileage: '10 km/l',
-      performance: '0-120 Km/h, Top Speed 220 km/h',
+      performance: '0-120 Km/h, Top Speed 150 km/h',
       style: {
         height: '60vh',
         // borderRadius: '10px',
@@ -102,7 +102,7 @@ const CarBookingServices = () => {
       acType: 'Manual climate control',
       transmission: 'Manual',
       mileage: '10 km/l',
-      performance: '0-120 Km/h, Top Speed 220 km/h',
+      performance: '0-120 Km/h, Top Speed 150 km/h',
       style: {
         height: '50vh',
         // borderRadius: '10px',
@@ -123,7 +123,7 @@ const CarBookingServices = () => {
       acType: 'Manual climate control',
       transmission: 'Manual',
       mileage: '10 km/l',
-      performance: '0-120 Km/h, Top Speed 220 km/h',
+      performance: '0-120 Km/h, Top Speed 150 km/h',
       style: {
         height: '60vh',
         // borderRadius: '10px',
@@ -143,7 +143,7 @@ const CarBookingServices = () => {
       acType: 'Manual climate control',
       transmission: 'Manual',
       mileage: '10 km/l',
-      performance: '0-120 Km/h, Top Speed 220 km/h',
+      performance: '0-120 Km/h, Top Speed 150 km/h',
       style: {
         width: '42%',
         height: '60vh',
@@ -187,7 +187,7 @@ const CarBookingServices = () => {
       acType: 'Manual climate control',
       transmission: 'Manual',
       mileage: '10 km/l',
-      performance: '0-120 Km/h, Top Speed 220 km/h',
+      performance: '0-120 Km/h, Top Speed 150 km/h',
     },
     {
       url: '/shivakant-car.jpg',
@@ -197,7 +197,7 @@ const CarBookingServices = () => {
       acType: 'Manual climate control',
       transmission: 'Manual',
       mileage: '10 km/l',
-      performance: '0-120 Km/h, Top Speed 220 km/h',
+      performance: '0-120 Km/h, Top Speed 150 km/h',
       style: {
         height: '60vh',
         width: '42%',
