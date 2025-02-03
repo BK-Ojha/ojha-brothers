@@ -40,11 +40,10 @@ const WhatsappChat = () => {
             left: 20px;
             width: 320px;
             background: #fff;
-            border: 1px solid #ddd;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 1001;
-          font-family: cursive;
+            font-family: Arial, sans-serif;
           }
           .chat-box-header {
             background-color: #25d366;
@@ -53,14 +52,26 @@ const WhatsappChat = () => {
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 10px;
           }
-          .chat-box-header h4 {
-            margin: 0;
+          .chat-logo {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            padding: 2px;
+          }
+          .chat-title {
+            flex: 1;
             font-size: 14px;
+            font-weight: bold;
           }
-          .chat-box-header button {
+          .chat-status {
+            font-size: 12px;
+            color: #d4f7d4;
+          }
+          .close-btn {
             background: none;
             border: none;
             color: white;
@@ -68,7 +79,6 @@ const WhatsappChat = () => {
             cursor: pointer;
           }
           .chat-box-body {
-            background: url('https://www.transparenttextures.com/patterns/white-diamond.png');
             padding: 15px;
             font-size: 14px;
             color: #333;
@@ -78,7 +88,6 @@ const WhatsappChat = () => {
             background-color: #d4f7d4;
             padding: 10px;
             border-radius: 8px;
-            font-size: 14px;
           }
           .chat-box-footer {
             padding: 10px;
@@ -126,11 +135,21 @@ const WhatsappChat = () => {
           }}
         >
           <div className="chat-box-header">
-            <h4>Ojha Brothers - Hanumat Kripa Roadlines</h4>
-            <button onClick={() => setIsChatOpen(false)}>&times;</button>
+            <img
+              src="/logo_icon2.jpg"
+              alt="Ojha Brothers"
+              className="chat-logo"
+            />
+            <div className="chat-title">
+              Ojha Brothers <br />
+              <span className="chat-status">Online</span>
+            </div>
+            <button className="close-btn" onClick={() => setIsChatOpen(false)}>
+              &times;
+            </button>
           </div>
           <div className="chat-box-body">
-            <p>Any questions related to Car booking Or Truck Loading?</p>
+            <p>Any questions related to Car Booking or Truck Loading?</p>
           </div>
           <div className="chat-box-footer">
             <a
@@ -140,9 +159,9 @@ const WhatsappChat = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              WhatsApp Us
+              Start Chat
             </a>
-            <p>Online | Privacy policy</p>
+            <p>⚡ by Ojha Brothers</p>
           </div>
         </div>
       )}

@@ -110,9 +110,9 @@ const NavbarComponents = () => {
 
             <div className="mx-auto scrolling-text-container ">
               <p className="scrolling-text">
-                Welcome to <span style={{ color: 'red' }}>Ojha Brothers</span>!
-                Book your car journey effortlessly. Load your truck with ease.
-                Get the best deals today! Call us now! 📞 +91-9838875119
+                <span style={{ color: 'red' }}>ओझा ब्रदर्स</span> में आपका
+                स्वागत है! अब कार बुकिंग और ट्रक लोडिंग हुई आसान। सबसे बेहतर
+                सेवाएँ और शानदार ऑफ़र पाएँ। अभी कॉल करें! 📞 +91-9838875119
               </p>
             </div>
             {/* Navigation Links */}

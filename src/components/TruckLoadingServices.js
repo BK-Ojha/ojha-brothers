@@ -82,6 +82,24 @@ const CarData = () => {
           padding-left: 40px;
         }
   
+         .text-btn{
+                      animation:blink-animation 2s infinite;
+                      
+                  }
+                  @keyframes blink-animation{
+                      0% {
+                          opacity: 1; /* Fully visible */
+                          color: white;
+                        }
+                        10% {
+                          opacity: 0.5; /* Half transparent */
+                          color: yellow;
+                        }
+                        100% {
+                          opacity: 1; /* Fully visible */
+                          color: white;
+                        }
+                  } 
         @media (max-width: 768px) {
           .mobile-left-align {
             text-align: left !important;
@@ -195,6 +213,15 @@ const CarData = () => {
                   paddingRight: '10px',
                 }}
               >
+                <p
+                  className="fw-bold text-danger"
+                  style={{ textAlign: 'justify' }}
+                >
+                  ⚠️ नोट : ट्रक की लोडिंग क्षमता सामग्री (Material) के प्रकार,
+                  वितरण स्थिति और मौसम परिस्थितियों पर निर्भर करती है। कृपया सही
+                  ट्रक का चयन करने से पहले आवश्यक विवरण की पुष्टि करें।
+                </p>
+
                 <h3 className="text-black">
                   <strong>छोटे ट्रक : </strong> {TruckData.loadSCapacity}
                 </h3>
@@ -203,7 +230,6 @@ const CarData = () => {
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
-
                 <h3 className="text-black">
                   <strong>मध्यम ट्रक : </strong> {TruckData.loadMCapacity}
                 </h3>
@@ -212,7 +238,6 @@ const CarData = () => {
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
-
                 <h3 className="text-black">
                   <strong>भारी ट्रक : </strong> {TruckData.loadHCapacity}
                 </h3>
@@ -221,7 +246,6 @@ const CarData = () => {
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
-
                 <h3 className="text-black">
                   <strong>रेफ्रिजरेटेड ट्रक : </strong>{' '}
                   {TruckData.loadRCapacity}
@@ -231,7 +255,6 @@ const CarData = () => {
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
-
                 <h3 className="text-black">
                   <strong>पार्सल ट्रक : </strong> {TruckData.loadPCapacity}
                 </h3>
@@ -240,7 +263,6 @@ const CarData = () => {
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
-
                 <h3 className="text-black">
                   <strong>कृषि ट्रक : </strong> {TruckData.loadACapacity}
                 </h3>
@@ -272,9 +294,10 @@ const CarData = () => {
                     textShadow: '0 4px 10px black',
                     fontSize: '20px',
                     borderRadius: '0 50px 0 50px',
+                    fontFamily: 'cursive',
                   }}
                 >
-                  Book Now!
+                  <span className="text-btn">Book Now!</span>
                 </Button>
               </Link>
             </div>

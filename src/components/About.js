@@ -220,6 +220,11 @@ const About = () => {
               your trusted partner for seamless transportation solutions across
               India. We specialize in offering car booking services and truck
               loading services, designed to meet the diverse needs of
+              individuals and businesses alike.
+              <br />
+              With a commitment to excellence, timely deliveries, and customer
+              satisfaction, Ojha Brothers is here to simplify your travel and
+              logistics needs.
             </h5>
             <div
               className="d-flex flex-wrap justify-content-center justify-content-lg-end"
@@ -937,11 +942,11 @@ const About = () => {
             >
               <Col md={6} data-aos="fade-right">
                 <h3
-                  className="fw-bold "
+                  className="fw-bold  text-success"
                   style={{
                     marginBottom: '1rem',
                     marginTop: '1rem',
-                    color: 'indigo',
+                    // color: 'indigo',
                   }}
                 >
                   Get In Touch
@@ -969,12 +974,12 @@ const About = () => {
               </Col>
               <Col md={6} data-aos="fade-left call-to-action-section">
                 <p
-                  className="fw-bold text-action call-to-action-text"
+                  className="fw-bold text-action call-to-action-text text-danger"
                   data-aos="fade-up"
                   style={{
                     letterSpacing: '2px',
                     fontSize: '25px',
-                    color: 'indigo',
+                    // color: 'indigo',
                   }}
                 >
                   Plan your journey with Ojha Brothers today!
@@ -1014,7 +1019,7 @@ const About = () => {
                       class="bi bi-telephone-fill"
                       style={{ color: 'inherit' }}
                     ></i>{' '}
-                    Let's Talk !
+                    Let's Talk!
                   </Button>
                 </Link>
               </Col>

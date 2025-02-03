@@ -463,7 +463,7 @@ const Home = () => {
                 color: 'indigo',
                 letterSpacing: '3px',
                 textShadow: '1px 0px 6px gray',
-                fontFamily: "'Poppins', 'Roboto', 'Arial', sans-serif",
+                fontFamily: 'Bungee Spice',
               }}
               data-aos="fade-left"
               data-aos-delay="100"
@@ -479,7 +479,8 @@ const Home = () => {
                 marginLeft: '10rem',
                 letterSpacing: '10px',
                 textShadow: '0 4px 10px indigo',
-                fontFamily: "'Poppins', 'Roboto', 'Arial', sans-serif",
+                // fontFamily: "'Poppins', 'Roboto', 'Arial', sans-serif",
+                fontFamily: 'Bungee Spice',
               }}
               data-aos="fade-right"
               data-aos-delay="100"
@@ -495,7 +496,7 @@ const Home = () => {
               // fontFamily: "'Pacifico', cursive",
               fontFamily: "'Poppins', 'Roboto', 'Arial', sans-serif",
               color: 'yellow',
-              textShadow: '0 4px 10px green',
+              textShadow: '0 4px 10px black',
             }}
           >
             Your Trusted Partner for Hassle-Free Car Journeys and Reliable Truck
@@ -510,24 +511,29 @@ const Home = () => {
           >
             <Link to="/carbookingservices">
               <button
-                className="btn btn-success btn-lg car-button"
-                style={{ gap: '4rem', textShadow: '0 4px 10px black' }}
+                className="btn btn-success btn-lg car-button fw-bold"
+                style={{
+                  gap: '4rem',
+                  textShadow: '0 4px 10px black',
+                  letterSpacing: '2px',
+                }}
                 data-aos="fade-up"
                 data-aos-delay="0"
               >
-                Book your Car Now !
+                Book your Car Now!
               </button>
             </Link>
             <Link to="/truckloadingservices">
               <button
-                className="btn btn-danger btn-lg truck-button"
+                className="btn btn-danger btn-lg truck-button fw-bold"
                 data-aos="fade-up"
                 data-aos-delay="0"
                 style={{
                   textShadow: '0 4px 10px black',
+                  letterSpacing: '2px',
                 }}
               >
-                Get your Truck for Loading !
+                Get your Truck for Loading!
               </button>
             </Link>
           </div>
@@ -559,9 +565,9 @@ const Home = () => {
             }}
           >
             <span className="text-danger">EXPLORE TOP</span>
-            <span className="text-success"> DESTINATIONS !</span>
+            <span className="text-success"> DESTINATIONS!</span>
           </h2>
-          <div className="image-track" data-aos="flip-up">
+          <div className="image-track " data-aos="flip-up">
             {places.map((place, index) => (
               <div
                 key={index}
@@ -582,7 +588,7 @@ const Home = () => {
                     borderRadius: '0 50px 0 50px',
                   }}
                 />
-                <div className="caption">
+                <div className="caption text-danger">
                   <h5
                     style={{
                       margin: '10px 0 5px',
@@ -593,7 +599,10 @@ const Home = () => {
                   >
                     {place.alt}
                   </h5>
-                  <p style={{ marginLeft: '1rem', marginRight: '1rem' }}>
+                  <p
+                    className="text-success"
+                    style={{ marginLeft: '1rem', marginRight: '1rem' }}
+                  >
                     {place.description}
                   </p>
                 </div>
@@ -609,7 +618,7 @@ const Home = () => {
                   fontFamily: "'Pacifico', cursive",
                   borderRadius: '50px 0 50px 0',
                 }}
-                className="card-hover-effect"
+                className="card-hover-effect "
               >
                 <img
                   src={place.src}
@@ -619,7 +628,7 @@ const Home = () => {
                     borderRadius: '0 50px 0 50px',
                   }}
                 />
-                <div className="caption">
+                <div className="caption text-danger">
                   <h5
                     style={{
                       margin: '10px 0 5px',
@@ -630,7 +639,10 @@ const Home = () => {
                   >
                     {place.alt}
                   </h5>
-                  <p style={{ marginLeft: '1rem', marginRight: '1rem' }}>
+                  <p
+                    className="text-success"
+                    style={{ marginLeft: '1rem', marginRight: '1rem' }}
+                  >
                     {place.description}
                   </p>
                 </div>
@@ -751,7 +763,10 @@ const Home = () => {
                       alt="Car Booking"
                     />
                     <div className="card-body">
-                      <h5 className="card-title fw-bold" data-aos="fade-right">
+                      <h5
+                        className="card-title fw-bold text-success"
+                        data-aos="fade-right"
+                      >
                         Car Booking
                       </h5>
                       <p className="card-text" data-aos="fade-left">
@@ -820,7 +835,10 @@ const Home = () => {
                       alt="Truck Loading"
                     />
                     <div className="card-body">
-                      <h5 className="card-title fw-bold" data-aos="fade-right">
+                      <h5
+                        className="card-title fw-bold text-danger"
+                        data-aos="fade-right"
+                      >
                         Truck Loading
                       </h5>
                       <p className="card-text" data-aos="fade-left">
@@ -1578,11 +1596,11 @@ const Home = () => {
             >
               <Col md={6} data-aos="fade-right">
                 <h3
-                  className="fw-bold "
+                  className="fw-bold text-success"
                   style={{
                     marginBottom: '1rem',
                     marginTop: '1rem',
-                    color: 'indigo',
+                    // color: 'indigo',
                   }}
                 >
                   Get In Touch
@@ -1610,7 +1628,7 @@ const Home = () => {
               </Col>
               <Col md={6} data-aos="fade-left call-to-action-section">
                 <p
-                  className="fw-bold text-action call-to-action-text"
+                  className="fw-bold text-action call-to-action-text text-danger"
                   data-aos="fade-up"
                   style={{
                     letterSpacing: '2px',

@@ -1,30 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
-import {
-  Container,
-  Table,
-  Row,
-  Col,
-  Form,
-  Button,
-  Card,
-  Modal,
-} from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Container, Row, Col, Button, Card } from 'react-bootstrap'
 import Footer from '../components/Footer'
 import WhatsappChat from './WhatsappChat'
-import Aos from 'aos'
 
 const ContactUs = () => {
-  const [isMobile, setIsMobile] = useState(false)
-  const [blurVideo, setBlurVideo] = useState(false)
-  const [showModal, setShowModal] = useState(false)
-  const handleShow = () => setShowModal(true)
-  const handleClose = () => {
-    setShowModal(false)
-  }
-  useEffect(() => {
-    handleShow()
-  }, [])
-
   const [formData, setFormData] = useState({
     fullName: '',
     phoneNumber: '',
@@ -74,7 +53,7 @@ const ContactUs = () => {
                         }
                         10% {
                           opacity: 0.5; /* Half transparent */
-                          color: black;
+                          color: yellow;
                         }
                         100% {
                           opacity: 1; /* Fully visible */
@@ -302,9 +281,9 @@ const ContactUs = () => {
                     <Button
                       data-aos="fade-down"
                       data-aos-delay="100"
-                      className="btn-danger"
+                      // className="btn-danger"
                       style={{
-                        borderRadius: '50px 0 50px 0',
+                        borderRadius: '30px 0 30px 0',
                         padding: '0.8rem 2.5rem',
                         // borderRadius: '10px',
                         fontSize: '1rem',
@@ -314,6 +293,8 @@ const ContactUs = () => {
                         color: '#fff',
                         fontWeight: 'bold',
                         // letterSpacing:"2px"
+                        background: 'linear-gradient(to right,red,blue)',
+                        // background:"transparent"
                       }}
                     >
                       <span className="text-btn">
@@ -653,10 +634,10 @@ const ContactUs = () => {
                       // fontFamily: "'Merriweather', serif",
                     }}
                   >
-                    We Love to Hear from You !
+                    We Love to Hear from You!
                   </h3>
                   <form
-                    action="https://formsubmit.co/bkojha8169@gmail.com"
+                    action="https://formsubmit.co/deepakojha6386@gmail.com"
                     method="POST"
                     onSubmit={handleSubmit}
                     style={{
@@ -677,7 +658,7 @@ const ContactUs = () => {
                         htmlFor="fullName"
                         className="form-label "
                       >
-                        Your Name
+                        Your Full Name
                       </label>
                       <input
                         data-aos="fade-left"
@@ -686,7 +667,7 @@ const ContactUs = () => {
                         className="form-control"
                         id="fullName"
                         name="fullName"
-                        placeholder="Enter your name"
+                        placeholder="Enter your full name"
                         value={formData.fullName}
                         onChange={handleChange}
                         required
@@ -757,9 +738,6 @@ const ContactUs = () => {
                       >
                         <option value="">Select message type</option>
                         <option value="general-inquiry">General Inquiry</option>
-                        <option value="booking-assistance">
-                          Booking Assistance
-                        </option>
                         <option value="complaint">Complaint</option>
                         <option value="feedback">Feedback</option>
                       </select>
@@ -781,7 +759,6 @@ const ContactUs = () => {
                         name="destination"
                         value={formData.destination}
                         onChange={handleChange}
-                        required
                       >
                         <option value="">Select your destination</option>
                         <option value="within-city">Within City</option>

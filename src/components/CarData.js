@@ -68,7 +68,25 @@ const CarData = () => {
             padding: 5px 0;
             font-size: 1.1em;
             line-height: 1.6;
-          }  
+          } 
+             .text-btn{
+                      animation:blink-animation 2s infinite;
+                      
+                  }
+                  @keyframes blink-animation{
+                      0% {
+                          opacity: 1; /* Fully visible */
+                          color: white;
+                        }
+                        10% {
+                          opacity: 0.5; /* Half transparent */
+                          color: yellow;
+                        }
+                        100% {
+                          opacity: 1; /* Fully visible */
+                          color: white;
+                        }
+                  } 
              @media (max-width: 768px) {
       .mobile-left-align {
         text-align: left !important;
@@ -167,7 +185,7 @@ const CarData = () => {
 
             {/* Basic Specifications */}
             <div
-              className="specifications "
+              className="specifications scrollable"
               data-aos="fade-right"
               data-aos-duration="1500"
             >
@@ -179,7 +197,8 @@ const CarData = () => {
                   <strong>Color:</strong> {carData.color}
                 </li>
                 <li>
-                  <strong>Seating Capacity:</strong> {carData.seatingCapacity}
+                  <strong>Seating Capacity:</strong> {carData.seatingCapacity}{' '}
+                  <strong> (Including driver)</strong>
                 </li>
                 <li>
                   <strong>Air Conditioning:</strong> {carData.acType}
@@ -201,29 +220,32 @@ const CarData = () => {
               </h3>
               <ul>
                 <li>
-                  <strong>Engine Details:</strong> {carData.engineDetails}
-                </li>
-                <li>
                   <strong>Mileage:</strong> {carData.mileage}
                 </li>
-                <li>
+                <li s>
                   <strong>Top Speed and Acceleration:</strong>{' '}
                   {carData.performance}
+                  <p className="fw-bold text-danger">
+                    ⚠️ Note: The vehicle's speed depends on road conditions and
+                    weather.
+                  </p>
                 </li>
               </ul>
               <Link to="/contactus">
                 <Button
                   variant="danger"
-                  className="fw-bold mt-3"
+                  className="fw-bold"
                   style={{
                     letterSpacing: '2px',
                     textShadow: '0 4px 10px black',
                     fontSize: '20px',
                     width: '100%',
                     borderRadius: '0 50px 0 50px ',
+                    fontFamily: 'cursive',
+                    marginTop: '-2rem',
                   }}
                 >
-                  Book Now!
+                  <span className="text-btn">Book Now!</span>
                 </Button>
               </Link>
             </div>
