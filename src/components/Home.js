@@ -178,6 +178,10 @@ const Home = () => {
                 margin-top: 4rem;
                 position: relative;
                 max-width: 100%;
+                // width:100%;
+                display:flex;
+                 scroll-behavior: smooth;
+                   padding-bottom: 10px;
               }
 
               .image-slider {
@@ -411,13 +415,13 @@ const Home = () => {
                     }
                     .dheeru-img{
                       height:15rem !important;
-                      // widht:20rem !important;
                         margin-bottom: -3rem !important;
-                    }        
-                  .slide {
-                        margin-bottom: 2rem !important;
-                    min-width: 70% !important;
-                  }
+                    } 
+                      .slider-image {
+                           max-height:15rem !important;
+                        min-width: 5rem !important; /* मोबाइल में इमेज थोड़ी छोटी करें */
+                     
+                      }
                     .testmo{
                         margin-bottom: 3rem !important;
                     font-size: 23px;
