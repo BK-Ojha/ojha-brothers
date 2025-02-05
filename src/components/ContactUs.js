@@ -102,20 +102,15 @@ const ContactUs = () => {
       <div
         className="first-container"
         style={{
-          // minHeight: '230vh',
-          // marginTop: '1.5rem',
           marginBottom: '1.5rem',
-          // paddingTop: '1.5rem',
-          // display: 'block',
-          // flexDirection: 'column',
         }}
       >
         <div
           style={{
             marginTop: '8rem',
             display: 'flex',
-            justifyContent: 'center', // Center horizontally
-            alignItems: 'center', // Center vertically
+            justifyContent: 'center',
+            alignItems: 'center',
             gap: '1rem',
           }}
         >
@@ -123,7 +118,7 @@ const ContactUs = () => {
             style={{
               width: '5rem',
               height: '5px',
-              backgroundColor: 'red', // Use backgroundColor instead of color
+              backgroundColor: 'red',
               border: 'none',
             }}
           />
@@ -131,16 +126,16 @@ const ContactUs = () => {
             style={{
               width: '1rem',
               height: '1rem',
-              backgroundColor: 'red', // Use backgroundColor instead of color
+              backgroundColor: 'red',
               border: 'none',
-              transform: 'rotate(135deg)', // Create a diagonal line
+              transform: 'rotate(135deg)',
             }}
           />
           <hr
             style={{
               width: '5rem',
               height: '5px',
-              backgroundColor: 'red', // Use backgroundColor instead of color
+              backgroundColor: 'red',
               border: 'none',
             }}
           />
@@ -152,7 +147,6 @@ const ContactUs = () => {
             fontWeight: 'bold',
             letterSpacing: '2px',
             fontFamily: 'normal',
-            // textShadow: '2px 2px 6px rgba(0,0,0,0.3)',
           }}
         >
           <span className="text-danger">GET IN </span>
@@ -165,11 +159,6 @@ const ContactUs = () => {
               padding: '0',
               marginTop: '10rem',
               marginBottom: '20vh',
-              // backgroundColor: 'var(--bs-secondary-bg)', // Correct inline CSS syntax
-              // color: 'rgb(var(--bs-secondary-bg-rgb))',
-              // background: 'linear-gradient(to right,#0072ff, red)',
-              // backgroundColor: 'transparent',
-              // padding: '9rem 1rem',
               height: '28rem',
               zIndex: -1,
             }}
@@ -206,8 +195,6 @@ const ContactUs = () => {
                 border: 'none',
                 background: 'linear-gradient(to right,red,blue)',
                 textShadow: '0 4px 10px black',
-                // textAlign: 'start',
-                // boxShadow: '0px 4px 15px gray',
                 boxShadow:
                   '0 10px 25px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.15)',
               }}
@@ -217,7 +204,6 @@ const ContactUs = () => {
                   className="align-items-center fw-bold"
                   style={{
                     marginTop: '10rem',
-                    // fontFamily: "normal",
                     letterSpacing: '3px',
                   }}
                 >
@@ -228,7 +214,6 @@ const ContactUs = () => {
                       className=" fw-bold text-center name-text"
                       style={{
                         fontSize: '2rem',
-                        // color: 'white',
                       }}
                     >
                       <span style={{ fontFamily: 'normal' }}>DEEPAK OJHA</span>{' '}
@@ -281,20 +266,16 @@ const ContactUs = () => {
                     <Button
                       data-aos="fade-down"
                       data-aos-delay="100"
-                      // className="btn-danger"
                       style={{
                         borderRadius: '30px 0 30px 0',
                         padding: '0.8rem 2.5rem',
-                        // borderRadius: '10px',
                         fontSize: '1rem',
                         letterSpacing: '2px',
                         textShadow: '0 4px 10px black',
                         border: 'none',
                         color: '#fff',
                         fontWeight: 'bold',
-                        // letterSpacing:"2px"
                         background: 'linear-gradient(to right,red,blue)',
-                        // background:"transparent"
                       }}
                     >
                       <span className="text-btn">
@@ -319,8 +300,8 @@ const ContactUs = () => {
               style={{
                 marginTop: '-3rem',
                 display: 'flex',
-                justifyContent: 'center', // Center horizontally
-                alignItems: 'center', // Center vertically
+                justifyContent: 'center',
+                alignItems: 'center',
                 gap: '1rem',
               }}
             >
@@ -328,7 +309,7 @@ const ContactUs = () => {
                 style={{
                   width: '5rem',
                   height: '5px',
-                  backgroundColor: 'red', // Use backgroundColor instead of color
+                  backgroundColor: 'red',
                   border: 'none',
                 }}
               />
@@ -336,16 +317,16 @@ const ContactUs = () => {
                 style={{
                   width: '1rem',
                   height: '1rem',
-                  backgroundColor: 'red', // Use backgroundColor instead of color
+                  backgroundColor: 'red',
                   border: 'none',
-                  transform: 'rotate(135deg)', // Create a diagonal line
+                  transform: 'rotate(135deg)',
                 }}
               />
               <hr
                 style={{
                   width: '5rem',
                   height: '5px',
-                  backgroundColor: 'red', // Use backgroundColor instead of color
+                  backgroundColor: 'red',
                   border: 'none',
                 }}
               />
@@ -432,7 +413,7 @@ const ContactUs = () => {
               style={{
                 marginTop: '-3rem',
                 display: 'flex',
-                justifyContent: 'center', // Center horizontally
+                justifyContent: 'center',
                 alignItems: 'center', // Center vertically
                 gap: '1rem',
               }}
@@ -441,7 +422,7 @@ const ContactUs = () => {
                 style={{
                   width: '5rem',
                   height: '5px',
-                  backgroundColor: 'red', // Use backgroundColor instead of color
+                  backgroundColor: 'red',
                   border: 'none',
                 }}
               />
@@ -449,16 +430,16 @@ const ContactUs = () => {
                 style={{
                   width: '1rem',
                   height: '1rem',
-                  backgroundColor: 'red', // Use backgroundColor instead of color
+                  backgroundColor: 'red',
                   border: 'none',
-                  transform: 'rotate(135deg)', // Create a diagonal line
+                  transform: 'rotate(135deg)',
                 }}
               />
               <hr
                 style={{
                   width: '5rem',
                   height: '5px',
-                  backgroundColor: 'red', // Use backgroundColor instead of color
+                  backgroundColor: 'red',
                   border: 'none',
                 }}
               />
@@ -859,91 +840,6 @@ const ContactUs = () => {
         </div>
         <WhatsappChat />
       </div>
-      {/* <Modal show={showModal} onHide={handleClose} centered size="xxl">
-        <div
-          style={{
-            boxShadow: '0px 10px 30px rgba(134, 36, 190, 0.4)', // Add prominent shadow here
-            borderRadius: '12px', // Smooth corners
-            // border: 'none',
-          }}
-        >
-          <Modal.Header
-            closeButton
-            title="Close"
-            style={{
-              backgroundColor: '#f8f9fa',
-              // borderBottom: '2px solid #ddd',
-              fontFamily: "'Pacifico', cursive",
-            }}
-          >
-            <Modal.Title
-              className="text-center w-100 fw-bold"
-              style={{
-                fontFamily: "'Pacifico', cursive",
-                fontSize: '1rem',
-                // textShadow: '0 4px 5px gray',
-              }}
-            >
-              <h2
-                className="text-center mb-4"
-                data-aos="fade-up"
-                style={{
-                  fontWeight: 'bold',
-                  letterSpacing: '2px',
-                  fontFamily: 'normal',
-                  textAlign: 'justify',
-                }}
-              >
-                <span
-                  className="text-danger"
-                  style={{
-                    textAlign: 'justify',
-                  }}
-                >
-                  WELCOME TO OJHA{' '}
-                </span>
-                <span
-                  className="text-success"
-                  style={{
-                    textAlign: 'justify',
-                  }}
-                >
-                  {' '}
-                  BROTHERS - HANUMAT KRIPA ROADLINES
-                </span>
-              </h2>
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body
-            className="bg-success"
-            style={{
-              backgroundColor: '#fff',
-              borderRadius: '8px',
-              padding: '30px',
-              fontFamily: "'Pacifico', cursive",
-              fontSize: '1.2rem',
-              lineHeight: '1.6',
-              textShadow: '0 4px 10px black',
-              color: 'white',
-              overflowY: 'auto',
-              textAlign: 'justify',
-            }}
-          >
-            At{' '}
-            <span style={{ fontWeight: 'bold', color: 'red' }}>
-              Ojha Brothers
-            </span>
-            , your satisfaction and peace of mind are our top priorities.
-            Whether you have a question, need assistance with our services, or
-            simply want to share feedback, we're always available to help. Our
-            dedicated team is ready to provide the support you need to make your
-            experience with us seamless and enjoyable. Don't hesitate to reach
-            out anytime, and we'll ensure you get the help you're looking for.
-            Your concerns matter to us, and we're here to address them promptly
-            and efficiently. Let us know how we can serve you better!
-          </Modal.Body>
-        </div>
-      </Modal> */}
     </>
   )
 }
