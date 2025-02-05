@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const Welcome = ({ onFinish }) => {
-  const [isMobile, setIsMobile] = useState(false)
+  const [setIsMobile] = useState(false)
 
   // Function to check if the device is mobile based on window width
   const checkMobileView = () => {

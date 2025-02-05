@@ -1,21 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import { Link, useNavigate } from 'react-router-dom'
+import { Row, Col } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 import Footer from './Footer'
 import WhatsappChat from './WhatsappChat'
-import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
 
 const CarBookingServices = () => {
   React.useEffect(() => {
     AOS.init({ duration: 1000 })
   }, [])
-
-  // const colorfulText = {
-  //   // color: 'rgb(255, 102, 0)',
-  //   textShadow: '2px 2px 6px rgba(0,0,0,0.3)',
-  // }
 
   const sectionStyle = {
     padding: '50px 20px',
@@ -23,7 +17,7 @@ const CarBookingServices = () => {
     marginTop: '1rem',
     minWidth: '100%',
   }
-  const [blurVideo, setBlurVideo] = useState(false)
+  const [ setBlurVideo] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,19 +34,6 @@ const CarBookingServices = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
-  const videoStyle = {
-    marginTop: '3rem',
-    height: '75%',
-    marginLeft: '30rem',
-    objectFit: 'cover',
-    boxShadow: '0 10px 20px rgba(0, 0, 0, 0.5)',
-    borderRadius: '0 50px 0 50px',
-    position: 'fixed',
-    animation: 'slideInFromLeft 1s ease-in-out',
-    zIndex: '-1',
-    filter: blurVideo ? 'blur(10px)' : 'none',
-    transition: 'filter 0.9s ease',
-  }
   const [hoveredIndex, setHoveredIndex] = useState(null)
   const carImages1 = [
     {

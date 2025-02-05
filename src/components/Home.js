@@ -13,21 +13,9 @@ const Home = () => {
     AOS.init({ duration: 1000 })
   }, [])
 
-  const colorfulText = {
-    // color: 'rgb(255, 102, 0)',
-    textShadow: '2px 2px 6px rgba(0,0,0,0.3)',
-    // fontSize: window.innerWidth <= 768 ? '12px' : '3rem',
-  }
-
   const sectionStyle = {
     padding: '50px 20px',
     marginTop: '1rem',
-  }
-  const cardStyle = {
-    border: 'none',
-    // boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
-    borderRadius: '10px',
-    transition: 'transform 0.3s',
   }
   const statsCardStyle = {
     color: 'black',
