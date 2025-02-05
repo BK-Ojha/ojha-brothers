@@ -17,7 +17,8 @@ const CarBookingServices = () => {
     marginTop: '1rem',
     minWidth: '100%',
   }
-  const [ setBlurVideo] = useState(false)
+  const [blurVideo, setBlurVideo] = useState(false)
+  console.log(blurVideo)
 
   useEffect(() => {
     const handleScroll = () => {
