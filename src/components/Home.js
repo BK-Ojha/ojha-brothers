@@ -46,8 +46,8 @@ const Home = () => {
     'xailesh_photo.png',
     'abhilash_photo.jpg',
     'shivakant_photo.jpg',
-    'mausa.jpg',
     'chotumama_photo.jpg',
+    'mausa.jpg',
   ]
 
   const places = [
@@ -173,14 +173,15 @@ const Home = () => {
                 }
 
                 .slider-container {
-                overflow: hidden;
+                // overflow: hidden;
+                // overflow-x:auto;
                 white-space: nowrap;
                 margin-top: 4rem;
                 position: relative;
                 max-width: 100%;
                 // width:100%;
                 display:flex;
-                 scroll-behavior: smooth;
+                //  scroll-behavior: smooth;
                    padding-bottom: 10px;
               }
 
@@ -409,6 +410,12 @@ const Home = () => {
                       justify-content:center;
                       margin-left: auto;
                     }
+                       .slide {
+                      min-width: 15%;
+                      padding: 13px;
+                      display: inline-block;
+                    }
+
                     .team-text{
                         margin-top: -1rem !important;
                         margin-bottom: -2rem !important;
