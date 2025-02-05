@@ -12,7 +12,7 @@ const WhatsappChat = () => {
           /* Floating Button */
           .whatsapp-button {
             position: fixed;
-            bottom: 20px;
+            bottom: 70px;
             left: 20px;
             z-index: 1000;
             background-color: #25d366;

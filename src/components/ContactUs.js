@@ -74,17 +74,21 @@ const ContactUs = () => {
                       .contact-large-container{
                         width:90% !important;
                         height:auto !important;
+                         display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        letter-spacing: 0px !important;
                       }
                         .name-text{
                         margin-top:-3rem;
-                        font-size:22px !important;
+                        font-size:15px !important;
                         }
                       .address-text{ 
                        margin-top:1rem !important;
                         font-size:16px !important;
                         text-align:start !important;
                         justify-content:flex-start !important;
-                         margin-left: -9rem !important;
+                         margin-left: -10rem !important;
                         align-items:left !important;
                         display:flex !important;
                         letter-spacing:1px !important;
@@ -219,7 +223,7 @@ const ContactUs = () => {
                       <span style={{ fontFamily: 'normal' }}>DEEPAK OJHA</span>{' '}
                       <span
                         style={{
-                          fontFamily: "'Pacifico', cursive",
+                          fontFamily: "'Pacifico', normal",
                           textShadow: '0 4px 10px red',
                         }}
                       >
@@ -385,7 +389,7 @@ const ContactUs = () => {
                   marginTop: '1rem',
                   flex: '1',
                   textAlign: 'justify',
-                  fontFamily: "'Pacifico', cursive",
+                  fontFamily: "'Pacifico', normal",
                 }}
               >
                 {' '}
@@ -485,7 +489,7 @@ const ContactUs = () => {
                   marginTop: '1rem',
                   flex: '1',
                   textAlign: 'justify',
-                  fontFamily: "'Pacifico', cursive",
+                  fontFamily: "'Pacifico', normal",
                 }}
               >
                 {' '}
@@ -558,7 +562,7 @@ const ContactUs = () => {
                     className=" rounded"
                     style={{ height: 'auto', maxWidth: '30rem' }}
                   >
-                    <source src="/contact2_video.mp4" type="video/mp4" />
+                    <source src="/contact_video.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -583,7 +587,7 @@ const ContactUs = () => {
                       letterSpacing: '2px',
                       fontWeight: '700',
                       // color: 'black',
-                      fontFamily: 'cursive',
+                      fontFamily: 'normal',
                       textShadow: '0 4px 5px gray',
                       // fontFamily: "'Merriweather', serif",
                     }}
@@ -609,7 +613,7 @@ const ContactUs = () => {
                       color: 'green',
                       letterSpacing: '2px',
                       // color: 'black',
-                      fontFamily: 'cursive',
+                      fontFamily: 'normal',
                       textShadow: '0 4px 5px gray',
                       fontWeight: '700',
                       // fontFamily: "'Merriweather', serif",
@@ -625,7 +629,7 @@ const ContactUs = () => {
                       backgroundColor: '#fff',
                       color: 'black',
                       borderColor: 'none',
-                      fontFamily: "'Pacifico', cursive",
+                      fontFamily: "'Pacifico', normal",
                       letterSpacing: '2px',
                     }}
                     className="mt-3 p-3 fw-bold"

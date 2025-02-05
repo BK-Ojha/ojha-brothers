@@ -101,33 +101,14 @@ const CarData = () => {
                         }
                   } 
         @media (max-width: 768px) {
-          .mobile-left-align {
-            text-align: left !important;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
-          }
-  
-          .mobile-left-align h3, 
-          .mobile-left-align ul {
-            text-align: left !important;
-            width: 100%;
-          }
-  
-          .specifications-container {
-            width: 100%;
-            padding: 10px;
-          }
-  
-          .content-section {
-            width: 100%;
-          }
-  
-          .mobile-image {
-            width: 100% !important;
-            max-width: 100% !important;
-          }
+         .our-vission{
+                      margin-top:1rem !important;
+                      }
+                      .car-image{
+                        width:100% !important;
+                        height:35vh !important;
+                        margin-bottom:1rem !important;
+                      }
         }
       `}
       </style>
@@ -196,7 +177,7 @@ const CarData = () => {
                   className="fw-bold text-center text-white"
                   style={{
                     letterSpacing: '2px',
-                    fontFamily: 'cursive',
+                    fontFamily: 'normal',
                     textShadow: '0 4px 10px black',
                   }}
                 >
@@ -294,7 +275,7 @@ const CarData = () => {
                     textShadow: '0 4px 10px black',
                     fontSize: '20px',
                     borderRadius: '0 50px 0 50px',
-                    fontFamily: 'cursive',
+                    fontFamily: 'normal',
                   }}
                 >
                   <span className="text-btn">Book Now!</span>
@@ -309,7 +290,7 @@ const CarData = () => {
                 alt="My Truck"
                 data-aos="fade-left"
                 data-aos-duration="1500"
-                className="mobile-image"
+                className="car-image"
               />
             </div>
           </div>

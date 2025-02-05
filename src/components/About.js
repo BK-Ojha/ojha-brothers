@@ -1,5 +1,5 @@
-import React, {  useState } from 'react'
-import { Container,  Row, Button, Col } from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Container, Row, Button, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
 import WhatsappChat from './WhatsappChat'
@@ -212,7 +212,7 @@ const About = () => {
                 marginTop: '1rem',
                 flex: '1',
                 textAlign: 'justify',
-                fontFamily: "'Pacifico', cursive",
+                fontFamily: 'normal',
               }}
             >
               Welcome to <span style={{ color: 'red' }}>Ojha Brothers</span>,
@@ -326,7 +326,7 @@ const About = () => {
                 marginTop: '1rem',
                 flex: '1',
                 textAlign: 'justify',
-                fontFamily: "'Pacifico', cursive",
+                fontFamily: 'normal',
               }}
             >
               To simplify travel and logistics by delivering top-notch services
@@ -428,7 +428,7 @@ const About = () => {
           <div
             className="container"
             style={{
-              fontFamily: "'Pacifico', cursive",
+              fontFamily: 'normal',
             }}
           >
             <div className="container">
@@ -704,7 +704,7 @@ const About = () => {
                 marginTop: '1rem',
                 flex: '1',
                 textAlign: 'justify',
-                fontFamily: "'Pacifico', cursive",
+                fontFamily: 'normal',
               }}
             >
               To become India's leading provider of car booking and truck
@@ -789,7 +789,7 @@ const About = () => {
             <div
               className="row mt-4 text-justify"
               style={{
-                fontFamily: "'Pacifico', cursive",
+                fontFamily: 'normal',
                 textAlign: 'justify',
               }}
             >
@@ -881,7 +881,7 @@ const About = () => {
           style={
             {
               // marginTop: '4rem',
-              // fontFamily: "'Pacifico', cursive",
+              // fontFamily: "normal",
             }
           }
         >
@@ -932,7 +932,7 @@ const About = () => {
           <Container>
             <Row
               style={{
-                fontFamily: "'Pacifico', cursive",
+                fontFamily: 'normal',
                 marginBottom: '2rem',
                 marginTop: '3rem',
                 color: '#333',

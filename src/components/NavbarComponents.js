@@ -55,24 +55,22 @@ const NavbarComponents = () => {
                 color:white;
               }
             
-                //    .scrolling-text {
-                //   display: inline-block;
-                //   white-space: nowrap; /* Keeps the text in a single line */
-                //   width: 90%;
-                //   animation: scroll-left 15s linear infinite; /* Smooth and infinite scrolling */
-                // }
+              
 
                 @media (max-width: 768px) {
                   nav{
                     margin-bottom:-1rem !important;
                   }
+                    .navbar-brand img{
+                      margin-left:1px !important;
+                    }                  
                 }
       `}
       </style>
       <nav
         className="navbar navbar-expand-lg navbar-light shadow "
         style={{
-          fontFamily: "'Pacifico', cursive",
+          fontFamily: 'normal',
           marginBottom: '-7rem',
         }}
       >

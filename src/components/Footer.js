@@ -92,7 +92,7 @@ const Footer = () => {
             </Col>
           </Row>
 
-          <Row style={{ fontFamily: "'Pacifico', cursive" }}>
+          <Row style={{ fontFamily: 'normal' }}>
             {/* About Section */}
             <Col
               md={4}

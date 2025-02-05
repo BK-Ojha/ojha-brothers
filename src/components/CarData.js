@@ -87,25 +87,16 @@ const CarData = () => {
                           color: white;
                         }
                   } 
-             @media (max-width: 768px) {
-      .mobile-left-align {
-        text-align: left !important;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .mobile-left-align h3, 
-      .mobile-left-align ul {
-        text-align: left !important;
-      }
-
-      .mobile-image {
-        margin-left: 0 !important;
-        width: 100% !important;
-        max-width: 400px !important;
-      }
-    }
+                      @media (max-width: 768px) {
+                      .our-vission{
+                      margin-top:1rem !important;
+                      }
+                      .car-image{
+                        width:100% !important;
+                        height:35vh !important;
+                        margin-bottom:1rem !important;
+                      }
+              }
 `}
       </style>
       <section className="our-vission py-5" style={{ marginTop: '7rem' }}>
@@ -175,7 +166,7 @@ const CarData = () => {
                   letterSpacing: '2px',
                   fontSize: '24px',
                   color: 'white',
-                  fontFamily: 'cursive',
+                  fontFamily: 'normal',
                   textShadow: '0 4px 10px black',
                 }}
               >
@@ -241,7 +232,7 @@ const CarData = () => {
                     fontSize: '20px',
                     width: '100%',
                     borderRadius: '0 50px 0 50px ',
-                    fontFamily: 'cursive',
+                    fontFamily: 'normal',
                     marginTop: '-2rem',
                   }}
                 >

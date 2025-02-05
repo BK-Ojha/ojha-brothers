@@ -20,7 +20,7 @@ const Home = () => {
   const statsCardStyle = {
     color: 'black',
     // borderRadius: '10px',
-    // fontFamily: "'Pacifico', cursive",
+    // fontFamily: "normal",
   }
 
   const items = [
@@ -352,34 +352,52 @@ const Home = () => {
 
                  @media (max-width: 768px) {
                     .hero-style{
-                        margin-top: 3rem !important;
+                        margin-top: 1rem !important;
+                        height:250px;
                     }
                   
                     .ojha-text{
-                    align-items:left !important;
-                    justify-content:left !important;
-                    display:flex !important;
-                    margin-top:6rem !important;
+                    margin-top:-1rem !important;
                     margin-left: -2rem !important;
-                    font-size: 20px !important;
+                    font-size: 30px !important;
                     }
                       .hanumat-text{
-                   align-items:center !important;
-                    justify-content:center !important;
-                    display:flex !important;
-                    margin-left: 6rem !important;
+                    margin-left: 8rem !important;
                     margin-top: -1rem !important;
-                    font-size: 20px !important;
-                    letter-spacing:3px !important;
+                    font-size: 15px !important;
+                    letter-spacing:0px !important;
+                    }
+                    .lead{
+                      font-size: 12px !important;
+                        text-align: left !important;
                     }
 
+                      /* Removes underline from Link */
+                      .car-link {
+                        text-decoration: none !important;
+                      }
+                   .car-button, .truck-button {
+                        font-size: 10px !important;
+                        width: 150px;
+                        height: 40px;
+                        text-align: center !important;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        letter-spacing: 1px !important;
+                        text-decoration: none !important; /* Removes underline */
+                    }
+                      .car-button {
+                        margin-left: 9rem;
+                      }
 
-                    .car-button{
-                      font-size:12px !important;
-                    }
-                       .truck-button{
-                      font-size:12px !important;
-                    }
+                      .truck-button {
+                        margin-right: 9rem;
+                      }
+                        .exploredest{
+                        margin-top:1rem;
+                        font-size:15px;
+                        }
                        .carousel-image {
                       height: 120px; /* Adjust as needed */
                       width: 280px;
@@ -387,20 +405,26 @@ const Home = () => {
                       justify-content:center;
                       margin-left: auto;
                     }
-                    .lead{
-                    font-size: 12px !important;
-                    }
                     .team-text{
-                        margin-top: 1rem !important;
+                        margin-top: -1rem !important;
                         margin-bottom: -2rem !important;
                     }
                     .dheeru-img{
-                      height:20rem !important;
-                      widht:10rem !important;
+                      height:15rem !important;
+                      // widht:20rem !important;
+                        margin-bottom: -3rem !important;
                     }        
                   .slide {
-                    min-width: 40% !important;
+                        margin-bottom: 2rem !important;
+                    min-width: 70% !important;
                   }
+                    .testmo{
+                        margin-bottom: 3rem !important;
+                    font-size: 23px;
+                    }
+                    .part{
+                     margin-bottom: -1rem !important;
+                    }
                  .container {
                     margin: 0;
                   }
@@ -481,7 +505,7 @@ const Home = () => {
             data-aos="fade-down"
             data-aos-delay="0"
             style={{
-              // fontFamily: "'Pacifico', cursive",
+              // fontFamily: "normal",
               fontFamily: "'Poppins', 'Roboto', 'Arial', sans-serif",
               color: 'yellow',
               textShadow: '0 4px 10px black',
@@ -493,15 +517,15 @@ const Home = () => {
           <div
             className="mt-4 d-flex justify-content-center button"
             style={{
-              fontFamily: "'Pacifico', cursive",
-              gap: '8rem', // Adjust gap between buttons
+              fontFamily: 'normal',
+              gap: '1rem', // Adjust gap between buttons
             }}
           >
-            <Link to="/carbookingservices">
+            <Link to="/carbookingservices" className="car-link">
               <button
                 className="btn btn-success btn-lg car-button fw-bold"
                 style={{
-                  gap: '4rem',
+                  // gap: '4rem',
                   textShadow: '0 4px 10px black',
                   letterSpacing: '2px',
                 }}
@@ -511,7 +535,7 @@ const Home = () => {
                 Book your Car Now!
               </button>
             </Link>
-            <Link to="/truckloadingservices">
+            <Link to="/truckloadingservices" className="car-link">
               <button
                 className="btn btn-danger btn-lg truck-button fw-bold"
                 data-aos="fade-up"
@@ -540,7 +564,7 @@ const Home = () => {
           }}
         >
           <h2
-            className="text-center mb-4 "
+            className="text-center mb-4 exploredest"
             data-aos="flip-left"
             data-aos-delay="100"
             style={{
@@ -548,8 +572,8 @@ const Home = () => {
               letterSpacing: '2px',
               color: 'indigo',
               fontFamily: 'normal',
-              // fontFamily: 'Comic Sans MS, Comic Sans, cursive',
-              // fontFamily: "'Pacifico', cursive",
+              // fontFamily: 'Comic Sans MS, normal',
+              // fontFamily: "normal",
             }}
           >
             <span className="text-danger">EXPLORE TOP</span>
@@ -562,7 +586,7 @@ const Home = () => {
                 style={{
                   textAlign: 'center',
                   marginBottom: '1rem',
-                  fontFamily: "'Pacifico', cursive",
+                  fontFamily: 'normal',
                   borderRadius: '50px 0 50px 0',
                 }}
                 className="card-hover-effect"
@@ -603,7 +627,7 @@ const Home = () => {
                 style={{
                   textAlign: 'center',
                   marginBottom: '1rem',
-                  fontFamily: "'Pacifico', cursive",
+                  fontFamily: 'normal',
                   borderRadius: '50px 0 50px 0',
                 }}
                 className="card-hover-effect "
@@ -695,7 +719,7 @@ const Home = () => {
           <div
             className="container"
             style={{
-              fontFamily: "'Pacifico', cursive",
+              fontFamily: 'normal',
             }}
           >
             <div className="container">
@@ -860,7 +884,7 @@ const Home = () => {
             style={{
               marginTop: '4rem',
               animation: 'zoomIn 1.5s ease-in-out',
-              // fontFamily: 'cursive',
+              // fnormal',
               overflowX: 'hidden',
             }}
           >
@@ -1004,7 +1028,7 @@ const Home = () => {
           />
         </div>
         <h2
-          className="text-center mb-4"
+          className="text-center mb-4 testmo"
           data-aos="fade-up"
           style={{
             fontWeight: 'bold',
@@ -1060,7 +1084,7 @@ const Home = () => {
                   </div>
                   <p
                     className="testimonial-text"
-                    style={{ fontFamily: "'Pacifico', cursive" }}
+                    style={{ fontFamily: 'normal' }}
                   >
                     {testimonial.text}
                   </p>
@@ -1082,7 +1106,7 @@ const Home = () => {
           data-aos="fade-up"
           style={{
             marginBottom: '3rem',
-            // fontFamily: "'Pacifico', cursive",
+            // fontFamily: "normal",
           }}
         >
           <div
@@ -1121,7 +1145,7 @@ const Home = () => {
             />
           </div>
           <h2
-            className="text-center mb-4"
+            className="text-center mb-4 testmo"
             data-aos="fade-up"
             style={{
               fontWeight: 'bold',
@@ -1134,7 +1158,7 @@ const Home = () => {
           </h2>
           <Row
             className="justify-content-center mx-0"
-            style={{ fontFamily: "'Pacifico', cursive" }}
+            style={{ fontFamily: 'normal' }}
           >
             <div
               className="d-flex justify-content-center align-items-center  flex-wrap"
@@ -1199,7 +1223,7 @@ const Home = () => {
                   <h3
                     className="mt-3 text-center fw-bold"
                     style={{
-                      fontFamily: "'Pacifico', cursive",
+                      fontFamily: 'normal',
                       fontSize: '1.1rem',
                       lineHeight: '1.3',
                       wordWrap: 'break-word',
@@ -1268,7 +1292,7 @@ const Home = () => {
               />
             </div>
             <h2
-              className="text-center mb-4"
+              className="text-center mb-4 testmo"
               data-aos="fade-up"
               style={{
                 fontWeight: 'bold',
@@ -1296,10 +1320,7 @@ const Home = () => {
                     suffix="+"
                   />
                 </h1>
-                <p
-                  className="text-muted"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
-                >
+                <p className="text-muted" style={{ fontFamily: 'normal' }}>
                   Happy Customers
                 </p>
               </div>
@@ -1318,10 +1339,7 @@ const Home = () => {
                     suffix="+"
                   />
                 </h1>
-                <p
-                  className="text-muted"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
-                >
+                <p className="text-muted" style={{ fontFamily: 'normal' }}>
                   Car Bookings
                 </p>
               </div>
@@ -1340,10 +1358,7 @@ const Home = () => {
                     suffix="+"
                   />
                 </h1>
-                <p
-                  className="text-muted"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
-                >
+                <p className="text-muted" style={{ fontFamily: 'normal' }}>
                   Trucks Loaded
                 </p>
               </div>
@@ -1362,10 +1377,7 @@ const Home = () => {
                     suffix="+"
                   />
                 </h1>
-                <p
-                  className="text-muted"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
-                >
+                <p className="text-muted" style={{ fontFamily: 'normal' }}>
                   Years of Service
                 </p>
               </div>
@@ -1411,7 +1423,7 @@ const Home = () => {
             />
           </div>
           <h2
-            className="text-center mb-4 text-black fw-bold"
+            className="testmo text-center mb-4 text-black fw-bold part"
             data-aos="fade-up"
             style={{
               fontWeight: 'bold',
@@ -1453,7 +1465,7 @@ const Home = () => {
                   marginTop: '1rem',
                   flex: '1',
                   textAlign: 'justify',
-                  fontFamily: "'Pacifico', cursive",
+                  fontFamily: 'normal',
                 }}
               >
                 {' '}
@@ -1526,7 +1538,7 @@ const Home = () => {
           className="contact-section py-5 bg-light"
           style={{
             marginTop: '-2rem',
-            fontFamily: "'Pacifico', cursive",
+            fontFamily: 'normal',
           }}
         >
           <div
@@ -1575,7 +1587,7 @@ const Home = () => {
           <Container>
             <Row
               style={{
-                fontFamily: "'Pacifico', cursive",
+                fontFamily: 'normal',
                 marginBottom: '2rem',
                 marginTop: '3rem',
                 color: '#333',
