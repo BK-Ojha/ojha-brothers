@@ -417,8 +417,8 @@ const Home = () => {
                     }
 
                     .team-text{
-                        margin-top: -1rem !important;
-                        margin-bottom: -2rem !important;
+                        margin-top: 1rem !important;
+                        margin-bottom: -1rem !important;
                     }
                     .dheeru-img{
                       height:15rem !important;
@@ -837,7 +837,7 @@ const Home = () => {
                       <strong>समय की पाबंदी:</strong> समय पर लोडिंग और डिलीवरी।
                     </li>
                   </ul>
-                  <Link to="/contactus">
+                  <Link to="/contactus" style={{ textDecoration: 'none' }}>
                     <button
                       className="btn btn-outline-danger mt-4 truck-button"
                       style={{ letterSpacing: '1px' }}
@@ -1627,7 +1627,7 @@ const Home = () => {
                   <span className="fw-bold">
                     <FaPhoneAlt /> Phone :{' '}
                   </span>{' '}
-                  +91 9838875119
+                  +91 - 9838875119
                 </p>
                 <p>
                   {' '}

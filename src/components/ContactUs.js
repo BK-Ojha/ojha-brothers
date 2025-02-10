@@ -252,7 +252,7 @@ const ContactUs = () => {
                         className="bi bi-envelope-fill text-start "
                         style={{ color: 'white', marginLeft: '13.5rem' }}
                       ></i>
-                      {'  '}deepakojha6386@gmail.com
+                      {'   '}deepakojha6386@gmail.com
                     </p>
                     <p
                       data-aos="fade-right"
@@ -263,7 +263,7 @@ const ContactUs = () => {
                         class="bi bi-telephone-fill text-start"
                         style={{ color: 'white', marginLeft: '13.5rem' }}
                       ></i>{' '}
-                      {'  '}9838875119
+                      {'  '}+91 - 9838875119
                     </p>
                   </Col>
                   <div className="btn d-flex align-items-center justify-content-center mt-4 danger-call-btn">
@@ -518,6 +518,8 @@ const ContactUs = () => {
                   borderRadius: '50px 0 50px 0',
                   // borderRadius: '8px',
                   // boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                  marginBottom: '3rem',
+                  marginTop: '2rem',
                 }}
               />
             </div>
